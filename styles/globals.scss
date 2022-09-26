@@ -6,8 +6,10 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+$color-xhite: #b04848;
+
 a {
-  color: inherit;
+  color: $color-xhite;
   text-decoration: none;
 }
 
@@ -15,12 +17,4 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-}
+
