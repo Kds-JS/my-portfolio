@@ -1,14 +1,19 @@
 
-import styles from '../styles/Home.module.scss'
+import { Box} from '@chakra-ui/react'
+import About from '../Components/About/About';
+import Profil from '../Components/Profil/Profil';
+import Skills from '../Components/Skills/Skills';
+
 
  const Home = () => {
   
 
   return (
-    <div className={styles.container}>
-      <h1>Portfolio</h1>
-      <a href="#">Link</a>
-    </div>
+    <Box px={{base: '5%', sm:'7%', lg: "10%"}}>
+      <Profil/>
+      <About/>
+      <Skills/>
+    </Box>
   )
 }
 
