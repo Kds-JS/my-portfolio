@@ -1,4 +1,4 @@
-import { GridItem, Flex, Grid, Box, Heading, Text, Link, Image, Center} from '@chakra-ui/react';
+import { Flex, Box, Heading, Text, Link} from '@chakra-ui/react';
 
 
 import React from 'react';
@@ -7,38 +7,29 @@ import { BsGithub, BsTwitter,BsLinkedin } from 'react-icons/bs';
 const Profil = () => {
 
     return (
-        <Flex mt={{base: "100px", md:"0"}} minH="85vh" justify="center" direction="column">
-            <Grid templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(3, 1fr)'}} gap={10}>
-
-            <GridItem colSpan={2} >
+        <Flex mt={{base: "20px", md:"30px", lg:"40px"}} minH="85vh" justify="center" direction="column" pl={{base: "0", lg:"5%"}} pr={{base: "0", xl:"25%"}}>
+            
                 <Box color="white" >
-                    <Flex gap="15px" align={{base:'flex-start', xl:'center'}}mb="20px" direction={{base:'column', xl:'row'}}>
-                    <Heading size="2xl">Hello, Je suis</Heading>
+                    <Flex gap="15px" align={{base:'flex-start', xl:'center'}}mb="20px" direction={{base:'column', md:'row'}}>
+                    <Heading size="2xl">Hello 🖐, Je suis</Heading>
                     <Heading size="2xl" bgGradient='linear(to-bl, primary.900, primary.700)' bgClip="text">Koudous Salifou</Heading>
                     </Flex>
-                    <Heading size="3xl">Développeur Front-End</Heading>
+
+                    <Flex gap="15px" align={{base:'flex-start', xl:'center'}}mb="20px" direction={{base:'column', md:'row'}}>
+                    <Heading size="3xl">Développeur</Heading>
+                    <Heading size="3xl">Front-End</Heading>
+                    </Flex>
+                    
                 </Box>
 
-                <Text my="25px" fontSize="18px">
-                Je suis un développeur web du Bénin. J'aime utiliser les technologies Web pour tout créer, des petits sites Web aux applications hautement interactives pour le Web, les appareils mobiles et les ordinateurs de bureau.
+                <Text my="25px" fontSize="18px" pr={{base:"25px", xl:"0"}}>
+                Je suis un développeur web du Bénin. Je suis autodidacte et passionné par les dernières technologies web.
                 </Text>
 
                 
 
                 <Flex mt="50px" gap="25px" wrap="wrap">
-                    {/* <Link
-                    bg="secondary.900"
-                    color="primary.900"
-                    p="3"
-                    position="relative"
-                    _hover={{
-                        textDecoration:"none",
-                        top: "-5px",
-                        
-                    }}
-                    href="#">
-                        Telechargez mon  CV
-                    </Link> */}
+                    
 
                     <Link
                     display="flex"
@@ -101,11 +92,7 @@ const Profil = () => {
                     </Link>
                 </Flex>
                 
-            </GridItem>
-
             
-
-            </Grid>
         </Flex>
     );
 };

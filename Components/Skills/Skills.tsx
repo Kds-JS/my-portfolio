@@ -1,7 +1,6 @@
 import React from 'react';
-import { GridItem, Flex, Grid, Box, Heading, Text, Link, Image, Center} from '@chakra-ui/react';
+import {Flex, Grid, Box, Heading, Text} from '@chakra-ui/react';
 
-import styles from '../../styles/Home.module.scss';
 
 import { SiTypescript, SiJavascript, SiHtml5, SiCss3, SiChakraui, SiFirebase, SiSass, SiGithub} from 'react-icons/si';
 import { GrReactjs} from 'react-icons/gr';
@@ -11,12 +10,12 @@ import { BsBootstrapFill} from 'react-icons/bs';
 const Skills = () => {
 
     return (
-        <Box my="50px">
-        <Box textAlign="center">
+        <Box my="40px">
+        <Box textAlign="center" >
             <Heading color="white" size="2xl">Skills</Heading>
         </Box>
 
-        <Flex mt={{base: "100px", md:"0"}} className={styles.Skills} minH="85vh" justify="center" direction="column" >
+        <Box  py="100px">
 
             <Grid templateColumns={{base: 'repeat(2, 1fr)', md: 'repeat(4, 1fr)', xl: 'repeat(6, 1fr)'}} gap={10}>
 
@@ -122,7 +121,7 @@ const Skills = () => {
             
             </Grid>
             
-        </Flex>
+        </Box>
 
         </Box>
     );
