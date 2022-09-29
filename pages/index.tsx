@@ -22,3 +22,6 @@ import Skills from '../Components/Skills/Skills';
 }
 
 export default Home;
+
+
+

@@ -1,8 +1,8 @@
-import { Center, Circle } from "@chakra-ui/react";
+import { Circle } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { BiArrowToTop } from "react-icons/bi";
 
-export default function ScrollToTop() {
+function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
@@ -36,3 +36,5 @@ export default function ScrollToTop() {
     </>
   );
 }
+
+export default ScrollToTop;
