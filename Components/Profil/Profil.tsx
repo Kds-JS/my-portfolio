@@ -11,7 +11,7 @@ const Profil = () => {
             
                 <Box color="white" >
                     <Flex gap="15px" align={{base:'flex-start', xl:'center'}}mb="20px" direction={{base:'column', md:'row'}}>
-                    <Heading size="2xl">Hello 🖐, Je suis</Heading>
+                    <Heading size="xl">Hello 🖐, Je suis</Heading>
                     <Heading size="2xl" bgGradient='linear(to-bl, primary.900, primary.700)' bgClip="text">Koudous Salifou</Heading>
                     </Flex>
 
@@ -44,7 +44,7 @@ const Profil = () => {
                     _hover={{
                         textDecoration:"none",
                         
-                        bg:"primary.400",
+                        bg:"primary.900",
                         color:'white'
                     }}
                     href="https://github.com/Kds-JS">
@@ -64,7 +64,7 @@ const Profil = () => {
                     _hover={{
                         textDecoration:"none",
                         
-                        bg:"primary.400",
+                        bg:"primary.900",
                         color:'white'
                     }}
                     href="#">
@@ -84,7 +84,7 @@ const Profil = () => {
                     _hover={{
                         textDecoration:"none",
                         
-                        bg:"primary.400",
+                        bg:"primary.900",
                         color:'white'
                     }}
                     href="#">

@@ -21,7 +21,6 @@ const colors = {
   }
 }
 
-
 const styles = {
   global: {
     'html, body': {
@@ -38,7 +37,7 @@ const styles = {
   },
 }
 
-const theme = extendTheme({ colors,styles })
+const theme = extendTheme({ colors,styles})
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

@@ -1,27 +1,33 @@
 import React from 'react';
-import {Flex, Grid, Box, Heading, Text, Link, Button, useDisclosure} from '@chakra-ui/react';
 
 import { SiGithub } from 'react-icons/si';
-import {BsBoxArrowUpRight, BsArrowRightCircleFill } from 'react-icons/bs';
-import AllProject from '../AllProject/AllProject';
+import {BsBoxArrowUpRight} from 'react-icons/bs';
 
 
 
+import { Modal,ModalOverlay,ModalContent,ModalBody,ModalFooter,ModalHeader,ModalCloseButton,Text,Button, Flex, Grid, Box, Link } from '@chakra-ui/react';
 
 
-const Project = () => {
-    const { isOpen, onOpen, onClose } = useDisclosure();
+
+type AllProjectProps = {
+    onClose: () => void;
+    isOpen: boolean;
+}
+
+
+const AllProject = (props: AllProjectProps) => {
+    console.log(props);
 
     return (
-        <>
-        <Box py={{base: "50px", md: "100px"}} id="project">
-        <Box textAlign="center">
-            <Heading color="white" size="2xl">Project</Heading>
-        </Box>
+        <Modal onClose={props.onClose} isOpen={props.isOpen} size={{base: "full", md:"2xl", lg:"3xl", xl: "4xl"}} isCentered scrollBehavior='inside' >
+        <ModalOverlay />
+        <ModalContent maxW="800px" bgColor="secondary.800">
+          <ModalHeader color="white" fontSize="25px">Projet</ModalHeader>
+          <ModalCloseButton size="lg" _hover={{color:"white"}}/>
+          <ModalBody >
+          <Text>
 
-        <Box  py="100px">
-
-            <Grid templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)', xl: 'repeat(3, 1fr)'}} columnGap={6} rowGap={10}>
+          <Grid templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)'}} columnGap={6} rowGap={10}>
 
 
             <Box h={{base: "400px", lg:"370px"}} bg="secondary.900" p="20px" boxShadow="dark-lg" borderRadius="xl">
@@ -89,7 +95,7 @@ const Project = () => {
                 </Text>
 
                 <Flex wrap="wrap" gap="10px" h="30%" mt={{base:"15px", lg:"5px"}}>
-                  
+                
                     
 
                     <Box h="max-content" py="5px" px="10px" border="1px" borderRadius="5px" color="primary.800">
@@ -116,7 +122,7 @@ const Project = () => {
                 </Flex>
             </Box>
 
-            <Box h={{base: "400px", lg:"370px"}} bg="secondary.900" p="20px" boxShadow="dark-lg" borderRadius="xl" >
+            <Box h={{base: "400px", lg:"370px"}} bg="secondary.900" p="20px" boxShadow="dark-lg" borderRadius="xl">
 
                 <Text color="white" fontSize="25px" fontWeight="semibold" mb="10px">E-Shop</Text>
 
@@ -154,31 +160,19 @@ const Project = () => {
                 </Flex>
             </Box>
 
-            
-            
-            </Grid>
 
-            <Box textAlign={{base:"center", lg:"right"}}>
-                <Button
-                onClick={() => onOpen()}
-                fontSize="25px"
-                _hover={{
-                    bg:"primary.900",
-                    color: "white"
-                }}
-                rightIcon={<BsArrowRightCircleFill/>}
-                 px="100px" mt="40px" color="black" bg="primary.900" variant='solid' borderRadius="full">
-                    Voir Tous
-                </Button>
-            </Box>
-            
-        </Box>
 
-        </Box>
+        </Grid>
 
-            <AllProject onClose={onClose} isOpen={isOpen}/>
-        </>
+
+          </Text>
+          </ModalBody>
+          <ModalFooter>
+            <Button variant="outline" onClick={props.onClose} _hover={{bgColor:"secondary.800", color:"white"}}>Fermer</Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     );
 };
 
-export default Project;
+export default AllProject;

@@ -3,6 +3,7 @@ import { Box} from '@chakra-ui/react'
 import About from '../Components/About/About';
 import Profil from '../Components/Profil/Profil';
 import Project from '../Components/Project/Project';
+import ScrollToTop from '../Components/ScrollToTop/ScrollToTop';
 import Skills from '../Components/Skills/Skills';
 
 
@@ -15,6 +16,7 @@ import Skills from '../Components/Skills/Skills';
       <About/>
       <Skills/>
       <Project/>
+      <ScrollToTop/>
     </Box>
   )
 }

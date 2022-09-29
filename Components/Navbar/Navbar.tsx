@@ -4,12 +4,16 @@ import {
   Box,
   Flex,
   HStack,
-  Link,
   IconButton,
   useDisclosure,
   Stack,
+  Text,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+
+import {Link} from "react-scroll";
+
+
 
 
 
@@ -28,59 +32,38 @@ const Navbar = () => {
               as={'nav'}
               spacing='30px'
               display={{ base: 'none', md: 'flex' }}>
-              <Link
-                px={2}
-                py={1}
-                rounded={'md'}
-                _hover={{
-                color:"primary.500"
-                }}
-                href={'#'}>
-                Home
-            </Link>
-            <Link
-                px={2}
-                py={1}
-                rounded={'md'}
-                _hover={{
-                color:"primary.500"
-                }}
-                href={'#about'}>
-                About
-            </Link>
+              <Text cursor="pointer" _hover={{color:"primary.500"}}>
+                <Link 
+                activeClass="active" to="about" spy={true} smooth={false} offset={0} 
+                  >
+                  A propos
+                </Link>
+              </Text>
 
-            <Link
-                px={2}
-                py={1}
-                rounded={'md'}
-                _hover={{
-                color:"primary.500"
-                }}
-                href={'#'}>
-                Skill
-            </Link>
+              <Text cursor="pointer" _hover={{color:"primary.500"}}>
+                <Link 
+                activeClass="active" to="skills" spy={true} smooth={false} offset={0} 
+                  >
+                  Skills
+                </Link>
+              </Text>
 
-            <Link
-                px={2}
-                py={1}
-                rounded={'md'}
-                _hover={{
-                color:"primary.500"
-                }}
-                href={'#'}>
-                Project
-            </Link>
+              <Text cursor="pointer" _hover={{color:"primary.500"}}>
+                <Link 
+                activeClass="active" to="project" spy={true} smooth={false} offset={0}
+                  >
+                  Projet
+                </Link>
+              </Text>
 
-            <Link
-                px={2}
-                py={1}
-                rounded={'md'}
-                _hover={{
-                color:"primary.500"
-                }}
-                href={'#'}>
-                Contact
-            </Link>
+              <Text cursor="pointer" _hover={{color:"primary.500"}}>
+                <Link 
+                activeClass="active" to="contact" spy={true} smooth={false} offset={0} 
+                  >
+                  Contact
+                </Link>
+              </Text>
+            
             </HStack>
 
             <IconButton
@@ -106,61 +89,41 @@ const Navbar = () => {
 
         {isOpen ? (
           <Box mt={6} pb={6} display={{ md: 'none' }}>
-            <Stack as={'nav'} spacing={4}>
+            <Stack as={'nav'} spacing={6}>
 
-            <Link
-                px={2}
-                py={1}
-                rounded={'md'}
-                _hover={{
-                color:"primary.500"
-                }}
-                href={'#'}>
-                Home
-            </Link>
-            <Link
-                px={2}
-                py={1}
-                rounded={'md'}
-                _hover={{
-                color:"primary.500"
-                }}
-                href={'#'}>
-                About
-            </Link>
+              <Text cursor="pointer" _hover={{color:"primary.500"}}>
+                <Link 
+                activeClass="active" to="about" spy={true} smooth={false} offset={0} 
+                  >
+                  A propos
+                </Link>
+              </Text>
 
-            <Link
-                px={2}
-                py={1}
-                rounded={'md'}
-                _hover={{
-                color:"primary.500"
-                }}
-                href={'#'}>
-                Skill
-            </Link>
+              <Text cursor="pointer" _hover={{color:"primary.500"}}>
+                <Link 
+                activeClass="active" to="skills" spy={true} smooth={false} offset={0} 
+                  >
+                  Skills
+                </Link>
+              </Text>
 
-            <Link
-                px={2}
-                py={1}
-                rounded={'md'}
-                _hover={{
-                color:"primary.500"
-                }}
-                href={'#'}>
-                Project
-            </Link>
+              <Text cursor="pointer" _hover={{color:"primary.500"}}>
+                <Link 
+                activeClass="active" to="project" spy={true} smooth={false} offset={0}
+                  >
+                  Projet
+                </Link>
+              </Text>
 
-            <Link
-                px={2}
-                py={1}
-                rounded={'md'}
-                _hover={{
-                color:"primary.500"
-                }}
-                href={'#'}>
-                Contact
-            </Link>
+              <Text cursor="pointer" _hover={{color:"primary.500"}}>
+                <Link 
+                activeClass="active" to="contact" spy={true} smooth={false} offset={0} 
+                  >
+                  Contact
+                </Link>
+              </Text>
+            
+       
             </Stack>
           </Box>
         ) : null}

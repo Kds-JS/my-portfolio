@@ -5,7 +5,7 @@ import { GridItem, Flex, Grid, Box, Heading, Text, Link, Image, Center} from '@c
 const About = () => {
 
     return (
-        <Box my="60px">
+        <Box py="60px" id="about">
         <Box textAlign="center">
             <Heading color="white" size="2xl">À Propos</Heading>
         </Box>

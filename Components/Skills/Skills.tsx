@@ -10,7 +10,7 @@ import { BsBootstrapFill} from 'react-icons/bs';
 const Skills = () => {
 
     return (
-        <Box my="40px">
+        <Box py="40px" id="skills">
         <Box textAlign="center" >
             <Heading color="white" size="2xl">Skills</Heading>
         </Box>
