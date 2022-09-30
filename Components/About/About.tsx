@@ -2,6 +2,8 @@ import React from 'react';
 import { GridItem, Flex, Grid, Box, Heading, Text, Link, Image, Center} from '@chakra-ui/react';
 
 
+
+
 const About = () => {
 
     return (
@@ -19,7 +21,8 @@ const About = () => {
 
             <GridItem >
                 <Center>
-                <Image
+                <Image 
+                boxShadow="dark-lg"
                 borderRadius='md'
                 boxSize={{base:'90%', md:'100%'}}
                 src='https://rainbowit.net/html/inbio/assets/images/slider/banner-06.png'
@@ -38,9 +41,11 @@ const About = () => {
 
                 <Flex mt="50px" gap="25px" wrap="wrap">
                     <Link
-                    bg="primary.300"
+                    bg="primary.900"
                     color="white"
                     p="3"
+                    w={{base: "100%", md:"50%", lg:"auto"}}
+                    textAlign="center"
                     boxShadow='dark-lg'
                     transition= "all 0.4s ease" 
                     _hover={{

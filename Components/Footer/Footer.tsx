@@ -10,7 +10,7 @@ const Footer = () => {
         <Flex px={{base: "5%", md:"0"}} pb="50px" align="center" direction="column" id="contact">
             <Heading color="white" mb="50px">Contact</Heading>
 
-            <Flex gap="25px" wrap="wrap">
+            <Flex gap="25px" wrap="wrap" justify="center">
 
                 <Link
                     fontSize="45px"

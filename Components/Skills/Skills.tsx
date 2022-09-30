@@ -89,7 +89,7 @@ const Skills = () => {
                 <Box fontSize="60px" color="#58C9C8">
                     <SiChakraui/>
                 </Box>
-                <Text fontSize="18px">Chakra Ui</Text>
+                <Text fontSize="18px">Chakra UI</Text>
             </Flex>
 
             <Flex height="180px" width={{base: "100%", md: "100%"}} bg="secondary.900" flexDirection="column" align="center" py="25px" justify="space-between" borderRadius="md" boxShadow='dark-lg' transition= "all 0.4s ease" _hover={{

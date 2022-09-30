@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from 'react';
-import {Flex, Grid, Box, Heading, Text, Link, Button, useDisclosure} from '@chakra-ui/react';
+import {Flex, Grid, Box, Heading, Text, Link, Button, useDisclosure, Image} from '@chakra-ui/react';
 
 import { SiGithub } from 'react-icons/si';
 import {BsBoxArrowUpRight, BsArrowRightCircleFill } from 'react-icons/bs';
@@ -38,13 +38,15 @@ const Project = () => {
 
             <Grid templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)', xl: 'repeat(3, 1fr)'}} columnGap={6} rowGap={10}>
 
-            { project && 
+            { project.length != 0 && 
 
             <>
 
             <Box h={{base: "400px", lg:"370px"}} bg="secondary.900" p="20px" boxShadow="dark-lg" borderRadius="xl">
 
                 <Text color="white" fontSize="25px" fontWeight="semibold" mb="10px">{project[0].name}</Text>
+
+                
 
                 <Text fontSize="18px"  h="40%">
                 {project[0].description}

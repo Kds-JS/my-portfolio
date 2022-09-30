@@ -1,16 +1,28 @@
 import { Flex, Box, Heading, Text, Link} from '@chakra-ui/react';
 
 
+
 import React from 'react';
 import { BsGithub, BsTwitter,BsLinkedin } from 'react-icons/bs';
+import { CgArrowLongDown} from 'react-icons/cg';
+import ButtonDown from '../Button/Button';
+
 
 const Profil = () => {
 
     return (
-        <Flex mt={{base: "20px", md:"30px", lg:"40px"}} minH="85vh" justify="center" direction="column" pl={{base: "0", lg:"5%"}} pr={{base: "0", xl:"25%"}}>
+        <Flex mt={{base: "20px", md:"30px", lg:"40px"}} minH="85vh" justify="center" direction="column" pl={{base: "0", lg:"5%"}} pr={{base: "0", xl:"25%"}} position="relative">
+
+
+                <ButtonDown>
+                    <Box position="absolute" bottom={{base: "0", md:"5%"}} left="48%" h="60px" w="30px" border="2px" borderRadius="15px" cursor="pointer"  fontSize="50px" color="white" display={{base:"none", sm:"flex"}} alignItems="center">
+                        <CgArrowLongDown className='scale-up-center'/>
+                    </Box>
+                </ButtonDown>
+                    
             
                 <Box color="white" >
-                    <Flex gap="15px" align={{base:'flex-start', xl:'center'}}mb="20px" direction={{base:'column', md:'row'}}>
+                    <Flex gap="15px" align={{base:'flex-start', xl:'center'}}mb="20px" direction={{base:'column', lg:'row'}}>
                     <Heading size="xl">Hello 🖐, Je suis</Heading>
                     <Heading size="2xl" bgGradient='linear(to-bl, primary.900, primary.700)' bgClip="text">Koudous Salifou</Heading>
                     </Flex>
