@@ -63,6 +63,8 @@ const Navbar = () => {
                   Contact
                 </Link>
               </Text>
+
+              
             
             </HStack>
 

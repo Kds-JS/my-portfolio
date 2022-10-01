@@ -1,10 +1,44 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { GridItem, Flex, Grid, Box, Heading, Text, Link, Image, Center} from '@chakra-ui/react';
 
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import {ScrollToPlugin} from 'gsap/dist/ScrollToPlugin';
 
+
+gsap.registerPlugin(ScrollTrigger,ScrollToPlugin);
 
 
 const About = () => {
+
+    const slideOnLoad = (el:string) => {
+        gsap.fromTo(
+            el,
+            {
+                opacity: 0,
+                translateX: "50px"
+            },
+            {
+                opacity: 1,
+                translateX: "0",
+                ease: "power4.inOut",
+                delay: 0.4,
+                duration: 2,
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top center",
+                    end: "bottom center"
+                }
+            }
+        )
+    }
+   
+
+    useEffect(() => {
+        slideOnLoad("#box");
+    }, [])
+
+
 
     return (
         <Box py="60px" id="about">
@@ -16,7 +50,7 @@ const About = () => {
 
             
 
-            <Grid templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(3, 1fr)'}} gap={10}>
+            <Grid templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(3, 1fr)'}} gap={10} id="box" alignItems="center">
 
 
             <GridItem >
@@ -31,7 +65,7 @@ const About = () => {
                 </Center>
             </GridItem>
 
-            <GridItem colSpan={2} pt={{base: "0", md: "6"}}>
+            <GridItem colSpan={2} >
 
                 <Text>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita nam animi nihil. Distinctio repellendus, expedita voluptas doloribus pariatur quas maiores! Nulla, sapiente? Mollitia doloremque praesentium, quo autem ullam rem eveniet!

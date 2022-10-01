@@ -6,12 +6,18 @@ import {BsBoxArrowUpRight, BsArrowRightCircleFill } from 'react-icons/bs';
 import AllProject from '../AllProject/AllProject';
 
 
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import {ScrollToPlugin} from 'gsap/dist/ScrollToPlugin';
 
+
+gsap.registerPlugin(ScrollTrigger,ScrollToPlugin);
 
 
 
 const Project = () => {
     const [project, setProject] = useState([]);
+    
 
 
     useEffect(() => {
@@ -27,14 +33,42 @@ const Project = () => {
 
     const { isOpen, onOpen, onClose } = useDisclosure();
 
+
+    const onLoad = (el:string, duration:number) => {
+        gsap.fromTo(
+            el,
+            {
+                opacity: 0,
+                x: -40
+            },
+            {
+                opacity: 1,
+                x: 0,
+                delay: 0.4,
+                duration: duration,
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top center",
+                    end: "bottom center"
+                }
+            }
+        )
+    }
+
+   
+
+    useEffect(() => {
+        onLoad("#projectbox",0.8);
+    }, [])
+
     return (
         <>
         <Box py={{base: "50px", md: "100px"}} id="project">
         <Box textAlign="center">
-            <Heading color="white" size="2xl">Project</Heading>
+            <Heading color="white" size="2xl" id="title">Project</Heading>
         </Box>
 
-        <Box  py="100px">
+        <Box  py="100px" id="projectbox">
 
             <Grid templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)', xl: 'repeat(3, 1fr)'}} columnGap={6} rowGap={10}>
 

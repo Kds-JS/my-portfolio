@@ -21,8 +21,8 @@ type AllProjectProps = {
 
 
 const AllProject = ({onClose,isOpen,project}: AllProjectProps) => {
-    console.log(project);
-    // const {onClose,isOpen,project} = props;
+    // console.log(project);
+
 
     
     
