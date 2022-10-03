@@ -1,5 +1,6 @@
 
 import { Box} from '@chakra-ui/react'
+import Head from 'next/head';
 import About from '../Components/About/About';
 import Profil from '../Components/Profil/Profil';
 import Project from '../Components/Project/Project';
@@ -8,10 +9,19 @@ import Skills from '../Components/Skills/Skills';
 
 
  const Home = () => {
+    
   
 
   return (
     <Box px={{base: '4%', sm:'6%', xl: "7%"}}>
+      <Head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="https://i.ibb.co/HF1SgjH/newlogo.png" />
+        
+        <title>Koudous Salifou  • Développeur React JS</title>
+      </Head>
+
       <Profil/>
       <About/>
       <Skills/>

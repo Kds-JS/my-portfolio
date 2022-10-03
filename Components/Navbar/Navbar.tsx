@@ -8,6 +8,7 @@ import {
   useDisclosure,
   Stack,
   Text,
+  Image
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
@@ -22,10 +23,15 @@ const Navbar = () => {
 
   return (
     <>
-      <Box py="1.5" px={{base: '5%', sm:'7%', lg: "10%"}}>
+      <Box py="1.5" px={{base: '1%', sm:'7%', lg: "10%"}}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
 
-            <Box color="white" fontSize="2rem">{"<Kds />"}</Box>
+            <Image
+              boxSize={{base:'60px',md:'80px'}}
+              objectFit='cover'
+              src='https://i.ibb.co/HF1SgjH/newlogo.png'
+              alt='logo'
+            />
           
 
           <HStack
@@ -52,7 +58,7 @@ const Navbar = () => {
                 <Link 
                 activeClass="active" to="project" spy={true} smooth={false} offset={0}
                   >
-                  Projet
+                  Projets
                 </Link>
               </Text>
 

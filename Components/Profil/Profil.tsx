@@ -60,7 +60,7 @@ const Profil = () => {
 
 
     return (
-        <Flex mt={{base: "20px", md:"30px", lg:"40px"}} minH="85vh" justify="center" direction="column" pl={{base: "0", lg:"5%"}} pr={{base: "0", xl:"25%"}} position="relative" >
+        <Flex mt={{base: "20px", md:"30px", lg:"40px"}} minH="87vh" justify="center" direction="column" pl={{base: "0", lg:"5%"}} pr={{base: "0", xl:"25%"}} position="relative" >
 
 
                 <ButtonDown>
@@ -83,8 +83,8 @@ const Profil = () => {
                     
                 </Box>
 
-                <Text my="25px" fontSize="18px" pr={{base:"25px", xl:"0"}} id='profil3'>
-                Je suis un développeur web du Bénin. Je suis autodidacte et passionné par les dernières technologies web.
+                <Text my="25px" fontSize="20px" pr={{base:"25px", xl:"0"}} id='profil3' >
+                Développeur autodidacte, passionné.
                 </Text>
 
                 

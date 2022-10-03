@@ -65,7 +65,7 @@ const Project = () => {
         <>
         <Box py={{base: "50px", md: "100px"}} id="project">
         <Box textAlign="center">
-            <Heading color="white" size="2xl" id="title">Project</Heading>
+            <Heading color="white" size="2xl" id="title">Projets</Heading>
         </Box>
 
         <Box  py="100px" id="projectbox">
