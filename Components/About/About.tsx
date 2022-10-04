@@ -72,7 +72,7 @@ const About = () => {
 
                 <Text my="20px">Je suis autodidacte et passionné par les dernières technologies web notamment la Blockchain.</Text>
 
-                <Text>{"Après un bootcamp de 4 mois où j'ai appris (HTML, CSS, Bootstrap, JavaScript, PHP et MySQL), j'ai continué à me former en autodidacte. Je suis toujours intéressé par l'apprentissage de nouvelles technologies et de nouveaux langages."}</Text>
+                <Text>{"Après un bootcamp de 3 mois où j'ai appris (HTML, CSS, JavaScript, PHP et MySQL), j'ai continué à me former en autodidacte. Je suis toujours intéressé par l'apprentissage de nouvelles technologies et de nouveaux langages."}</Text>
                 </Box>
 
 
