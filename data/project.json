@@ -4,8 +4,8 @@
             "name": "Portfolio",
             "description": "Le site que vous visitez actuellement",
             "skill": ["Next.JS", "TypeScript", "Chakra UI"],
-            "github": "https://github.com/Kds-JS/CoinTracker-app",
-            "live": "https://kds-coin-tracker.vercel.app/"
+            "github": "https://github.com/Kds-JS/my-portfolio",
+            "live": "https://kdssalifou.vercel.app/"
         },
 
         {

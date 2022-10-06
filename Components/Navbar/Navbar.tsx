@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <>
-      <Box py="1.5" px={{base: '0', sm:'7%', lg: "10%"}}>
+      <Box py="1.5" px={{base: '2%', sm:'7%', lg: "10%"}}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
 
             <Image
@@ -96,7 +96,7 @@ const Navbar = () => {
         </Flex>
 
         {isOpen ? (
-          <Box mt={6} pb={6} display={{ md: 'none' }}>
+          <Box pl="15px" mt={6} pb={6} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={6}>
 
               <Text cursor="pointer" _hover={{color:"primary.500"}}>
@@ -119,7 +119,7 @@ const Navbar = () => {
                 <Link 
                 activeClass="active" to="project" spy={true} smooth={false} offset={0}
                   >
-                  Projet
+                  Projets
                 </Link>
               </Text>
 
