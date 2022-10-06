@@ -63,7 +63,7 @@ const Footer = () => {
                     <Link
                     target="_blank"
                     fontSize="45px"
-                    href="mailto::kdskoudous98@gmail.com ">
+                    href="mailto::kdssalifou@gmail.com ">
                         <Circle size='100px' boxShadow='dark-lg' bg="primary.300"
                     color="primary.600" _hover={{
                         textDecoration:"none",
