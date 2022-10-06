@@ -46,8 +46,8 @@ const About = () => {
                     <GridItem colSpan={2} >
 
                     <motion.div
-                initial={{ opacity: 0, x:50}}
-                whileInView={{ opacity: 1, x: 0,
+                initial={{ opacity: 0, y:50}}
+                whileInView={{ opacity: 1, y: 0,
                     transition: {
                       type: "tween",
                     }}}
@@ -70,6 +70,7 @@ const About = () => {
 
                         <Flex mt="50px" gap="25px" wrap="wrap">
                             <Link
+                            target="_blank"
                             bg="primary.900"
                             color="white"
                             py="3"
@@ -81,7 +82,7 @@ const About = () => {
                             _hover={{
                                 transform: "translateY(-15px)"
                             }}
-                            href="#">
+                            href="https://drive.google.com/file/d/114rQDJL32I12oEY-ng-Gn2-eUL2xaNVQ/view?usp=drivesdk">
                                 Telechargez mon  CV
                             </Link>
 
