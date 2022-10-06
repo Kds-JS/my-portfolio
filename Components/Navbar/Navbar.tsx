@@ -10,7 +10,9 @@ import {
   Text,
   Image
 } from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+
+import { CgClose } from 'react-icons/cg';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 import {Link} from "react-scroll";
 
@@ -23,7 +25,7 @@ const Navbar = () => {
 
   return (
     <>
-      <Box py="1.5" px={{base: '1%', sm:'7%', lg: "10%"}}>
+      <Box py="1.5" px={{base: '0', sm:'7%', lg: "10%"}}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
 
             <Image
@@ -35,6 +37,7 @@ const Navbar = () => {
           
 
           <HStack
+              pl="15px"
               as={'nav'}
               spacing='30px'
               display={{ base: 'none', md: 'flex' }}>
@@ -75,19 +78,16 @@ const Navbar = () => {
             </HStack>
 
             <IconButton
-            size={'md'}
             bg="secondary.800"
             color="white"
-            fontSize={isOpen ? "16px" : "25px"}
+            fontSize={isOpen ? "30px" : "30px"}
             _hover={{
-                bg:"secondary.800",
-                border: "1px"
+                bg:"secondary.800"
             }}
             _focus={{
-                bg:"secondary.800",
-                border: "1px"
+                bg:"secondary.800"
             }}
-            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+            icon={isOpen ? <CgClose /> : <GiHamburgerMenu />}
             aria-label={'Open Menu'}
             display={{ md: 'none' }}
             onClick={isOpen ? onClose : onOpen}

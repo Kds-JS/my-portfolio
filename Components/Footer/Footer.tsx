@@ -13,8 +13,9 @@ const Footer = () => {
             <Flex gap="25px" wrap="wrap" justify="center">
 
                 <Link
+                    target="_blank"
                     fontSize="45px"
-                    href="#">
+                    href="https://github.com/Kds-JS">
                         <Circle size='100px' boxShadow='dark-lg' bg="primary.300"
                     color="primary.600" _hover={{
                         textDecoration:"none",
@@ -28,8 +29,9 @@ const Footer = () => {
                     </Link>
 
                     <Link
+                    target="_blank"
                     fontSize="45px"
-                    href="#">
+                    href="https://www.linkedin.com/in/koudous-salifou-5003a6249/">
                         <Circle size='100px' boxShadow='dark-lg' bg="primary.300"
                     color="primary.600" _hover={{
                         textDecoration:"none",
@@ -43,8 +45,9 @@ const Footer = () => {
                     </Link>
 
                     <Link
+                    target="_blank"
                     fontSize="45px"
-                    href="#">
+                    href="https://twitter.com/kds_JS">
                         <Circle size='100px' boxShadow='dark-lg' bg="primary.300"
                     color="primary.600" _hover={{
                         textDecoration:"none",
@@ -58,8 +61,9 @@ const Footer = () => {
                     </Link>
 
                     <Link
+                    target="_blank"
                     fontSize="45px"
-                    href="#">
+                    href="mailto::kdskoudous98@gmail.com ">
                         <Circle size='100px' boxShadow='dark-lg' bg="primary.300"
                     color="primary.600" _hover={{
                         textDecoration:"none",
@@ -74,7 +78,7 @@ const Footer = () => {
             </Flex>
 
             <Text mt='50px'>
-                Designed by @kds with NextJS and Chakra-UI
+                Designed and build by @kds with NextJS and Chakra-UI
             </Text>
         </Flex>
     );

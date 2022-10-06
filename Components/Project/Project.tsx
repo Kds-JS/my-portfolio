@@ -6,13 +6,7 @@ import {BsBoxArrowUpRight, BsArrowRightCircleFill } from 'react-icons/bs';
 import AllProject from '../AllProject/AllProject';
 
 
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import {ScrollToPlugin} from 'gsap/dist/ScrollToPlugin';
-
-
-gsap.registerPlugin(ScrollTrigger,ScrollToPlugin);
-
+import { motion} from "framer-motion";
 
 
 const Project = () => {
@@ -34,38 +28,11 @@ const Project = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
 
 
-    const onLoad = (el:string, duration:number) => {
-        gsap.fromTo(
-            el,
-            {
-                opacity: 0,
-                x: -40
-            },
-            {
-                opacity: 1,
-                x: 0,
-                delay: 0.4,
-                duration: duration,
-                scrollTrigger: {
-                    trigger: el,
-                    start: "top center",
-                    end: "bottom center"
-                }
-            }
-        )
-    }
-
-   
-
-    useEffect(() => {
-        onLoad("#projectbox",0.8);
-    }, [])
-
     return (
         <>
         <Box py={{base: "50px", md: "100px"}} id="project">
         <Box textAlign="center">
-            <Heading color="white" size="2xl" id="title">Projets</Heading>
+            <Heading color="white" size="2xl" id="title"> Mes Projets</Heading>
         </Box>
 
         <Box  py="100px" id="projectbox">
@@ -76,9 +43,18 @@ const Project = () => {
 
             <>
 
+            <motion.div
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y:0}}
+            transition={{
+                duration: 0.5,
+                delay: 0
+            }}
+            >
+
             <Box h={{base: "400px", lg:"370px"}} bg="secondary.900" p="20px" boxShadow="dark-lg" borderRadius="xl">
 
-                <Text color="white" fontSize="25px" fontWeight="semibold" mb="10px">{project[0].name}</Text>
+                <Heading color="white" fontSize="25px" fontWeight="semibold" mb="10px">{project[0].name}</Heading>
 
                 
 
@@ -124,9 +100,19 @@ const Project = () => {
                 </Flex>
             </Box>
 
+            </motion.div>
+            
+            <motion.div
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y:0}}
+            transition={{
+                duration: 0.5,
+                delay: 0.2
+            }}
+            >
             <Box h={{base: "400px", lg:"370px"}} bg="secondary.900" p="20px" boxShadow="dark-lg" borderRadius="xl">
 
-                <Text color="white" fontSize="25px" fontWeight="semibold" mb="10px">{project[1].name}</Text>
+                <Heading color="white" fontSize="25px" fontWeight="semibold" mb="10px">{project[1].name}</Heading>
 
                 <Text fontSize="18px"  h="40%">
                 {project[1].description}
@@ -168,11 +154,24 @@ const Project = () => {
                     </Link>
                     
                 </Flex>
+
+                
             </Box>
+
+            </motion.div>
+
+            <motion.div
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y:0}}
+            transition={{
+                duration: 0.5,
+                delay: 0.4
+            }}
+            >
 
             <Box h={{base: "400px", lg:"370px"}} bg="secondary.900" p="20px" boxShadow="dark-lg" borderRadius="xl">
 
-                <Text color="white" fontSize="25px" fontWeight="semibold" mb="10px">{project[2].name}</Text>
+                <Heading color="white" fontSize="25px" fontWeight="semibold" mb="10px">{project[2].name}</Heading>
 
                 <Text fontSize="18px"  h="40%">
                 {project[2].description}
@@ -215,6 +214,8 @@ const Project = () => {
                     
                 </Flex>
             </Box>
+
+            </motion.div>
 
             </>
 

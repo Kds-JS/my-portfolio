@@ -7,8 +7,9 @@ import {BsBoxArrowUpRight} from 'react-icons/bs';
 
 
 
-import { Modal,ModalOverlay,ModalContent,ModalBody,ModalFooter,ModalHeader,ModalCloseButton,Text,Button, Flex, Grid, Box, Link } from '@chakra-ui/react';
+import { Modal,ModalOverlay,ModalContent,ModalBody,ModalFooter,ModalHeader,ModalCloseButton,Text,Button, Flex, Grid, Box, Link, Heading } from '@chakra-ui/react';
 
+import { motion} from "framer-motion";
 
 
 type AllProjectProps = {
@@ -28,7 +29,7 @@ const AllProject = ({onClose,isOpen,project}: AllProjectProps) => {
     
 
     return (
-        <Modal onClose={onClose} isOpen={isOpen} size={{base: "full", md:"2xl", lg:"3xl", xl: "4xl"}} isCentered scrollBehavior='inside' >
+        <Modal onClose={onClose} isOpen={isOpen} size={{base: "full", lg:"3xl", xl: "4xl"}} isCentered scrollBehavior='inside' >
         <ModalOverlay />
         <ModalContent maxW="800px" bgColor="secondary.800">
           <ModalHeader color="white" fontSize="25px">Projet</ModalHeader>
@@ -38,13 +39,21 @@ const AllProject = ({onClose,isOpen,project}: AllProjectProps) => {
 
           <Grid templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)'}} columnGap={6} rowGap={10}>
 
-            {project && project.map((item,index) => {
+            {project && project.map((item: any, index: number) => {
                 return (
 
-              
-            <Box h={{base: "400px", lg:"370px"}} bg="secondary.900" p="20px" boxShadow="dark-lg" borderRadius="xl" key={index}>
+                    <motion.div key={index}
+                    initial={{ opacity: 0, y: 20}}
+                    whileInView={{ opacity: 1, y:0}}
+                    transition={{
+                        duration: 0.5,
+                        delay: 0.1
+                    }}
+                    viewport={{ once: true}}
+                    >
+            <Box h={{base: "400px", lg:"370px"}} bg="secondary.900" p="20px" boxShadow="dark-lg" borderRadius="xl" >
 
-                <Text color="white" fontSize="25px" fontWeight="semibold" mb="10px">{item.name}</Text>
+                <Heading color="white" fontSize="25px" fontWeight="semibold" mb="10px">{item.name}</Heading>
 
                 <Text fontSize="18px"  h="40%">
                 {item.description}
@@ -86,7 +95,7 @@ const AllProject = ({onClose,isOpen,project}: AllProjectProps) => {
                     
                 </Flex>
             </Box>
-
+            </motion.div>
 )
             })}
 

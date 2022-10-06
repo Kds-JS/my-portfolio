@@ -7,57 +7,11 @@ import { BsGithub, BsTwitter,BsLinkedin } from 'react-icons/bs';
 import { CgArrowLongDown} from 'react-icons/cg';
 import ButtonDown from '../Button/Button';
 
-
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import {ScrollToPlugin} from 'gsap/dist/ScrollToPlugin';
-
-
-gsap.registerPlugin(ScrollTrigger,ScrollToPlugin);
-
-
-
+import { motion} from "framer-motion";
 
 
 
 const Profil = () => {
-
-    const slideInTop = (el:string, duration:number) => {
-        gsap.fromTo(
-            el,
-            { 
-                autoAlpha: 0, 
-                yPercent: -25, 
-                stagger: 0.1 
-            },
-            {
-                autoAlpha: 1,
-                duration: duration,
-                ease: "power4.inOut",
-                translateY: "0",
-                yPercent: 0,
-                scrollTrigger: {
-                trigger: el,
-                once: true,
-                },
-            }
-        )
-    }
-
-   
-
-    useEffect(() => {
-        slideInTop("#profil1",0.8);
-    }, [])
-
-    useEffect(() => {
-        slideInTop("#profil2",1);
-    }, [])
-
-    useEffect(() => {
-        slideInTop("#profil3",2);
-    }, [])
-
 
     return (
         <Flex mt={{base: "20px", md:"30px", lg:"40px"}} minH="87vh" justify="center" direction="column" pl={{base: "0", lg:"5%"}} pr={{base: "0", xl:"25%"}} position="relative" >
@@ -71,28 +25,73 @@ const Profil = () => {
                     
             
                 <Box color="white" >
+                <motion.div
+                initial={{opacity: 0,
+                    x: 10,
+                    y: -20,
+                    }}
+                whileInView={{ opacity: 1,
+                    x: 0,
+                    y: 0,
+                    transition: {
+                        type: "spring",
+                        damping: 12,
+                        stiffness: 100,
+                      }}}
+                      viewport={{ once: true}}
+                >
                     <Flex gap="15px" align={{base:'flex-start', xl:'center'}}mb="20px" direction={{base:'column', lg:'row'}} id='profil1'>
                     <Heading size="xl" >Hello 🖐, Je suis</Heading>
                     <Heading size="2xl" bgGradient='linear(to-bl, primary.900, primary.700)' bgClip="text">Koudous Salifou</Heading>
                     </Flex>
-
+                    </motion.div>
+                    
+                    <motion.div
+                initial={{opacity: 0,
+                    x: -20,
+                    y: 10,
+                    }}
+                whileInView={{ opacity: 1,
+                    x: 0,
+                    y: 0,
+                    transition: {
+                        type: "spring",
+                        damping: 5,
+                        stiffness: 100,
+                      }}}
+                      viewport={{ once: true}}
+                >
                     <Flex gap="15px" align={{base:'flex-start', xl:'center'}}mb="20px" direction={{base:'column', md:'row'}} id='profil2'>
                     <Heading size="3xl">Développeur</Heading>
                     <Heading size="3xl">Front-End</Heading>
                     </Flex>
+
+                    </motion.div>
                     
                 </Box>
-
+                    
+                <motion.div
+                initial={{opacity: 0,
+                    y: 20
+                    }}
+                whileInView={{ opacity: 1,
+                    y: 0,
+                    transition: {
+                        type: "just"
+                      }}}
+                    viewport={{ once: true}}
+                >
                 <Text my="25px" fontSize="20px" pr={{base:"25px", xl:"0"}} id='profil3' >
                 Développeur autodidacte, passionné.
                 </Text>
-
+                </motion.div>
                 
 
                 <Flex mt="50px" gap="25px" wrap="wrap">
                     
 
                     <Link
+                    target="_blank"
                     display="flex"
                     alignItems="center"
                     gap="10px"
@@ -113,6 +112,7 @@ const Profil = () => {
                     </Link>
 
                     <Link
+                    target="_blank"
                     display="flex"
                     alignItems="center"
                     gap="10px"
@@ -128,11 +128,12 @@ const Profil = () => {
                         bg:"primary.900",
                         color:'white'
                     }}
-                    href="#">
+                    href="https://www.linkedin.com/in/koudous-salifou-5003a6249/">
                         <BsLinkedin/> Linkedin
                     </Link>
 
                     <Link
+                    target="_blank"
                     display="flex"
                     alignItems="center"
                     gap="10px"
@@ -148,7 +149,7 @@ const Profil = () => {
                         bg:"primary.900",
                         color:'white'
                     }}
-                    href="#">
+                    href="https://twitter.com/kds_JS">
                         <BsTwitter/> Twitter
                     </Link>
                 </Flex>

@@ -41,7 +41,7 @@
         },
 
         {
-            "name": "Harry-Potter",
+            "name": "Harry-Potter Landing Page",
             "description": "Une page d'accueil avec Bootstrap 5",
             "skill": ["Bootstrap"],
             "github": "https://github.com/Kds-JS/Harry-Potter-Landing-Page",

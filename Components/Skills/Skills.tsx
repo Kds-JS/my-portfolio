@@ -7,37 +7,8 @@ import { GrReactjs} from 'react-icons/gr';
 import { TbBrandNextjs} from 'react-icons/tb';
 import { BsBootstrapFill} from 'react-icons/bs';
 
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import {ScrollToPlugin} from 'gsap/dist/ScrollToPlugin';
 
 const Skills = () => {
-
-    const slideOnLoad = (el:string) => {
-        gsap.fromTo(
-            el,
-            {
-                opacity: 0,
-                translateX: "-50px"
-            },
-            {
-                opacity: 1,
-                translateX: "0",
-                delay: 0.4,
-                duration: 2,
-                scrollTrigger: {
-                    trigger: el,
-                    start: "top center",
-                    end: "bottom center"
-                }
-            }
-        )
-    }
-   
-
-    useEffect(() => {
-        slideOnLoad("#skillbox");
-    }, [])
 
     return (
         <Box py="40px" id="skills">
@@ -47,7 +18,7 @@ const Skills = () => {
 
         <Box  py="100px">
 
-            <Grid templateColumns={{base: 'repeat(2, 1fr)', md: 'repeat(4, 1fr)', xl: 'repeat(6, 1fr)'}} gap={10} id="skillbox">
+            <Grid templateColumns={{base: 'repeat(2, 1fr)', md: 'repeat(4, 1fr)', xl: 'repeat(6, 1fr)'}} gap={10}>
 
 
             <Flex height="180px" width={{base: "100%", md: "100%"}} bg="secondary.900" flexDirection="column" align="center" py="25px" justify="space-between" borderRadius="md" boxShadow='dark-lg' transition= "all 0.4s ease" _hover={{
