@@ -77,7 +77,7 @@ const Project = () => {
                 <Flex justify="space-between" mt="15px">
                 <Link
                     target="_blank"
-                    fontSize="25px"
+                    fontSize="30px"
                     _hover={{
                         textDecoration:"none",
                         color:'white'
@@ -88,7 +88,7 @@ const Project = () => {
 
                     <Link
                     target="_blank"
-                    fontSize="25px"
+                    fontSize="30px"
                     _hover={{
                         textDecoration:"none",
                         color:'white'
@@ -133,7 +133,7 @@ const Project = () => {
                 <Flex justify="space-between" mt="15px">
                 <Link
                     target="_blank"
-                    fontSize="25px"
+                    fontSize="30px"
                     _hover={{
                         textDecoration:"none",
                         color:'white'
@@ -144,7 +144,7 @@ const Project = () => {
 
                     <Link
                     target="_blank"
-                    fontSize="25px"
+                    fontSize="30px"
                     _hover={{
                         textDecoration:"none",
                         color:'white'
@@ -192,7 +192,7 @@ const Project = () => {
                 <Flex justify="space-between" mt="15px">
                 <Link
                     target="_blank"
-                    fontSize="25px"
+                    fontSize="30px"
                     _hover={{
                         textDecoration:"none",
                         color:'white'
@@ -203,7 +203,7 @@ const Project = () => {
 
                     <Link
                     target="_blank"
-                    fontSize="25px"
+                    fontSize="30px"
                     _hover={{
                         textDecoration:"none",
                         color:'white'

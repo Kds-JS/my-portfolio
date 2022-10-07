@@ -32,7 +32,7 @@ const AllProject = ({onClose,isOpen,project}: AllProjectProps) => {
         <Modal onClose={onClose} isOpen={isOpen} size={{base: "full", lg:"3xl", xl: "4xl"}} isCentered scrollBehavior='inside' >
         <ModalOverlay />
         <ModalContent maxW="800px" bgColor="secondary.800">
-          <ModalHeader color="white" fontSize="25px">Projet</ModalHeader>
+          <ModalHeader color="white" fontSize="25px">Mes projets</ModalHeader>
           <ModalCloseButton size="lg" _hover={{color:"white"}}/>
           <ModalBody >
           <Text>
@@ -73,7 +73,7 @@ const AllProject = ({onClose,isOpen,project}: AllProjectProps) => {
                 <Flex justify="space-between" mt="15px">
                 <Link
                     target="_blank"
-                    fontSize="25px"
+                    fontSize="30px"
                     _hover={{
                         textDecoration:"none",
                         color:'white'
@@ -84,7 +84,7 @@ const AllProject = ({onClose,isOpen,project}: AllProjectProps) => {
 
                     <Link
                     target="_blank"
-                    fontSize="25px"
+                    fontSize="30px"
                     _hover={{
                         textDecoration:"none",
                         color:'white'
