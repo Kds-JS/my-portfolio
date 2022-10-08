@@ -34,6 +34,8 @@ const Navbar = () => {
               src='https://i.ibb.co/HF1SgjH/newlogo.png'
               alt='logo'
             />
+
+            {/* <Box fontSize="50px" color="primary.900" background="secondary.800">{"{ k }"}</Box> */}
           
 
           <HStack
@@ -109,7 +111,7 @@ const Navbar = () => {
 
               <Text cursor="pointer" _hover={{color:"primary.500"}}>
                 <Link 
-                activeClass="active" to="skills" spy={true} smooth={false} offset={0} 
+                activeClass="active" to="skills" spy={true} smooth={true} offset={2} 
                   >
                   Skills
                 </Link>
@@ -117,7 +119,7 @@ const Navbar = () => {
 
               <Text cursor="pointer" _hover={{color:"primary.500"}}>
                 <Link 
-                activeClass="active" to="project" spy={true} smooth={false} offset={0}
+                activeClass="active" to="project" spy={true} smooth={false} offset={2}
                   >
                   Projets
                 </Link>
@@ -125,7 +127,7 @@ const Navbar = () => {
 
               <Text cursor="pointer" _hover={{color:"primary.500"}}>
                 <Link 
-                activeClass="active" to="contact" spy={true} smooth={false} offset={0} 
+                activeClass="active" to="contact" spy={true} smooth={true} offset={1} 
                   >
                   Contact
                 </Link>

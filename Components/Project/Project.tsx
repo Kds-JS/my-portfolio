@@ -7,22 +7,11 @@ import AllProject from '../AllProject/AllProject';
 
 
 import { motion} from "framer-motion";
-
+import { data } from '../../data/data';
 
 const Project = () => {
-    const [project, setProject] = useState([]);
+    const project = data.project;
     
-
-
-    useEffect(() => {
-        fetchData();
-      }, [])
-    
-      const fetchData = () => {
-        fetch('/api/projectapi')
-        .then(response => response.json())
-        .then(data => setProject(data.project))
-      }
 
 
     const { isOpen, onOpen, onClose } = useDisclosure();
