@@ -36,7 +36,7 @@ const About = () => {
                     <Image 
                     borderRadius='md'
                     boxSize={{base:'90%', md:'100%'}}
-                    src='https://i.ibb.co/HTkp50p/avataaars.png'
+                    src='https://i.ibb.co/Km4LQt8/profil-pic.png'
                     alt='profil'
                     />
                     </Center>
