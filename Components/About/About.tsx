@@ -82,7 +82,7 @@ const About = () => {
                             _hover={{
                                 transform: "translateY(-15px)"
                             }}
-                            href="https://drive.google.com/file/d/114rQDJL32I12oEY-ng-Gn2-eUL2xaNVQ/view?usp=drivesdk">
+                            href="https://drive.google.com/file/d/119Cbvo2rDZWRaliersjAZ5EmED0d2UVP/view?usp=drivesdk">
                                 Telechargez mon  CV
                             </Link>
 
