@@ -29,13 +29,11 @@ const Navbar = () => {
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
 
             <Image
-              boxSize={{base:'60px',md:'80px'}}
+              boxSize={{base:'40px',md:'50px'}}
               objectFit='cover'
-              src='https://i.ibb.co/HF1SgjH/newlogo.png'
+              src='https://i.ibb.co/C990FN3/brand-2.png'
               alt='logo'
             />
-
-            {/* <Box fontSize="50px" color="primary.900" background="secondary.800">{"{ k }"}</Box> */}
           
 
           <HStack

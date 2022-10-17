@@ -17,7 +17,7 @@ import Skills from '../Components/Skills/Skills';
       <Head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="https://i.ibb.co/HF1SgjH/newlogo.png" />
+        <link rel="icon" href="https://i.ibb.co/mymgg9v/brand-2-removebg-preview.png" />
         <meta property="og:title" content="Koudous Salifou  • Développeur React JS" />
      <meta property="og:description" content="je suis développeur web Front-End, voici mon portfolio." />
      <meta property="og:image" content="https://i.ibb.co/jyz16VK/website.png" />

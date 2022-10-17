@@ -1,12 +1,25 @@
 import React, { useEffect } from 'react';
-import { GridItem, Flex, Grid, Box, Heading, Text, Link, Image, Center} from '@chakra-ui/react';
+import { GridItem, Flex, Grid, Box, Heading, Text, Link, Image, Center, Button} from '@chakra-ui/react';
 
 import { motion} from "framer-motion";
 
 
 const About = () => {
 
-
+    const downloadCv = () => {
+        
+        fetch('cv-kds.pdf').then(response => {
+            response.blob().then(blob => {
+              
+                const fileURL = window.URL.createObjectURL(blob);
+ 
+                let alink = document.createElement('a');
+                alink.href = fileURL;
+                alink.download = 'cv-kds.pdf';
+                alink.click();
+            })
+        })
+    }
 
 
     return (
@@ -69,22 +82,18 @@ const About = () => {
 
 
                         <Flex mt="50px" gap="25px" wrap="wrap">
-                            <Link
-                            target="_blank"
-                            bg="primary.900"
-                            color="white"
-                            py="3"
-                            px="6"
+                            <Button
+                            onClick={downloadCv}
+                            colorScheme="purple"
+                            py="7"
+                            px="10"
+                            fontSize="20px"
+                            borderRadius="none"
                             w={{base: "100%", md:"50%", lg:"auto"}}
                             textAlign="center"
-                            boxShadow='dark-lg'
-                            transition= "all 0.4s ease" 
-                            _hover={{
-                                transform: "translateY(-15px)"
-                            }}
-                            href="https://drive.google.com/file/d/119Cbvo2rDZWRaliersjAZ5EmED0d2UVP/view?usp=drivesdk">
+                            boxShadow='dark-lg'>
                                 Telechargez mon  CV
-                            </Link>
+                            </Button>
 
                             
                         </Flex>
