@@ -5,7 +5,7 @@ export const data = {
             description: "Le site que vous visitez actuellement",
             skill: ["Next.JS", "TypeScript"," Chakra UI"],
             github: "https://github.com/Kds-JS/my-portfolio",
-            live: "https://kdssalifou.vercel.app/"
+            live: "https://koudous-salifou.com/"
         },
 
         {

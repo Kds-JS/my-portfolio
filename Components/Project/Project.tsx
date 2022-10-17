@@ -31,65 +31,6 @@ const Project = () => {
             { project.length != 0 && 
 
             <>
-
-            <motion.div
-            initial={{ opacity: 0, y: 20}}
-            whileInView={{ opacity: 1, y:0}}
-            transition={{
-                duration: 0.5,
-                delay: 0
-            }}
-            >
-
-            <Box h={{base: "400px", lg:"370px"}} bg="secondary.900" p="20px" boxShadow="dark-lg" borderRadius="xl">
-
-                <Heading color="white" fontSize="25px" fontWeight="semibold" mb="10px">{project[0].name}</Heading>
-
-                
-
-                <Text fontSize="18px"  h="40%">
-                {project[0].description}
-                </Text>
-
-                <Flex wrap="wrap" gap="10px" h="30%" mt={{base:"15px", lg:"5px"}}>
-
-                    {project[0].skill.map((skill:string,index:number) => (
-
-                    <Box h="max-content" py="5px" px="10px" border="1px" borderRadius="5px" color="primary.800" key={index}>
-                        {skill}
-                    </Box>
-
-                    ))}
-
-                </Flex>
-
-                <Flex justify="space-between" mt="15px">
-                <Link
-                    target="_blank"
-                    fontSize="30px"
-                    _hover={{
-                        textDecoration:"none",
-                        color:'white'
-                    }}
-                    href={project[0].github}>
-                        <SiGithub/>
-                    </Link>
-
-                    <Link
-                    target="_blank"
-                    fontSize="30px"
-                    _hover={{
-                        textDecoration:"none",
-                        color:'white'
-                    }}
-                    href={project[0].live}>
-                        <BsBoxArrowUpRight/>
-                    </Link>
-                    
-                </Flex>
-            </Box>
-
-            </motion.div>
             
             <motion.div
             initial={{ opacity: 0, y: 20}}
@@ -198,6 +139,65 @@ const Project = () => {
                         color:'white'
                     }}
                     href={project[2].live}>
+                        <BsBoxArrowUpRight/>
+                    </Link>
+                    
+                </Flex>
+            </Box>
+
+            </motion.div>
+
+            <motion.div
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y:0}}
+            transition={{
+                duration: 0.5,
+                delay: 0
+            }}
+            >
+
+            <Box h={{base: "400px", lg:"370px"}} bg="secondary.900" p="20px" boxShadow="dark-lg" borderRadius="xl">
+
+                <Heading color="white" fontSize="25px" fontWeight="semibold" mb="10px">{project[3].name}</Heading>
+
+                
+
+                <Text fontSize="18px"  h="40%">
+                {project[3].description}
+                </Text>
+
+                <Flex wrap="wrap" gap="10px" h="30%" mt={{base:"15px", lg:"5px"}}>
+
+                    {project[3].skill.map((skill:string,index:number) => (
+
+                    <Box h="max-content" py="5px" px="10px" border="1px" borderRadius="5px" color="primary.800" key={index}>
+                        {skill}
+                    </Box>
+
+                    ))}
+
+                </Flex>
+
+                <Flex justify="space-between" mt="15px">
+                <Link
+                    target="_blank"
+                    fontSize="30px"
+                    _hover={{
+                        textDecoration:"none",
+                        color:'white'
+                    }}
+                    href={project[3].github}>
+                        <SiGithub/>
+                    </Link>
+
+                    <Link
+                    target="_blank"
+                    fontSize="30px"
+                    _hover={{
+                        textDecoration:"none",
+                        color:'white'
+                    }}
+                    href={project[3].live}>
                         <BsBoxArrowUpRight/>
                     </Link>
                     
