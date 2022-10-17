@@ -9,8 +9,6 @@ import Skills from '../Components/Skills/Skills';
 
 
  const Home = () => {
-    
-  // <img src="https://i.ibb.co/jyz16VK/website.png" alt="website" border="0"></img>
 
   return (
     <Box px={{base: '4%', sm:'6%', xl: "7%"}}>
@@ -18,13 +16,13 @@ import Skills from '../Components/Skills/Skills';
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="https://i.ibb.co/mymgg9v/brand-2-removebg-preview.png" />
-        <meta property="og:title" content="Koudous Salifou  • Développeur React JS" />
+        <meta property="og:title" content="Koudous Salifou  • Développeur Freelance React JS" />
      <meta property="og:description" content="je suis développeur web Front-End, voici mon portfolio." />
-     <meta property="og:image" content="https://i.ibb.co/jyz16VK/website.png" />
-     <meta property="og:url" content="https://koudoussalifou.vercel.app" />
+     <meta property="og:image" content="https://i.ibb.co/6bkh9p7/website.png" />
+     <meta property="og:url" content="https://koudous-salifou.com/" />
      
      <meta name="twitter:card" content="summary_large_image"></meta>
-        
+     
         <title>Koudous Salifou  • Développeur React JS</title>
       </Head>
 
