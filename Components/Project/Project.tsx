@@ -11,7 +11,7 @@ import { motion} from "framer-motion";
 import { data } from '../../data/data';
 
 const Project = () => {
-    const projectArray = [1,2,3,4];
+    const projectArray = [0,1,2,3];
     const project = data.project;
     
 

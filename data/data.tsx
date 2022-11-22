@@ -1,14 +1,6 @@
 export const data = {
     project: [
         {
-            name: "Portfolio",
-            description: "Le site que vous visitez actuellement",
-            skill: ["Next.JS", "TypeScript"," Chakra UI"],
-            github: "https://github.com/Kds-JS/my-portfolio",
-            live: "https://koudous-salifou.com/"
-        },
-
-        {
             name: "Mint-Staking-Dapp",
             description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus necessitatibus a assumenda perferendis fugiat placeat dignissimos provident",
             image: 'https://i.ibb.co/FW4pjnZ/staking.png', 
