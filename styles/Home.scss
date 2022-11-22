@@ -25,4 +25,31 @@
     }
   }
 
+  #projectCard{
+
+
+    #imgHover{
+      opacity: 0;
+      transform: translateY(50%);
+      -webkit-transition: all 0.4s ease-in-out 0s;
+      -moz-transition: all 0.4s ease-in-out 0s;
+      transition: all 0.4s ease-in-out 0s;
+
+      @media screen and (max-width: 765px) {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+   
+
+    &:hover{
+
+      #imgHover{
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+
   

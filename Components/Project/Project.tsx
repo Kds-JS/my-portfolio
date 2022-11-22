@@ -1,6 +1,7 @@
 import React, {useState,useEffect} from 'react';
 import {Flex, Grid, Box, Heading, Text, Link, Button, useDisclosure, Image} from '@chakra-ui/react';
 
+
 import { SiGithub } from 'react-icons/si';
 import {BsBoxArrowUpRight, BsArrowRightCircleFill } from 'react-icons/bs';
 import AllProject from '../AllProject/AllProject';
@@ -10,6 +11,7 @@ import { motion} from "framer-motion";
 import { data } from '../../data/data';
 
 const Project = () => {
+    const projectArray = [1,2,3,4];
     const project = data.project;
     
 
@@ -26,11 +28,15 @@ const Project = () => {
 
         <Box  py="100px" id="projectbox">
 
-            <Grid templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)', xl: 'repeat(3, 1fr)'}} columnGap={6} rowGap={10}>
+            <Grid templateColumns={{base: 'repeat(1, 1fr)', lg: 'repeat(2, 1fr)'}} columnGap={10} rowGap={10} >
 
             { project.length != 0 && 
 
             <>
+
+            {projectArray.map ((item: number, index: number) => (
+
+            
             
             <motion.div
             initial={{ opacity: 0, y: 20}}
@@ -39,20 +45,28 @@ const Project = () => {
                 duration: 0.5,
                 delay: 0.2
             }}
+            key={index}
             >
-            <Box h={{base: "400px", lg:"370px"}} bg="secondary.900" p="20px" boxShadow="dark-lg" borderRadius="xl">
+            <Box bg="secondary.900" p="20px" boxShadow="dark-lg" borderRadius="xl" id="projectCard">
 
-                <Heading color="white" fontSize="25px" fontWeight="semibold" mb="10px">{project[1].name}</Heading>
+                <Heading color="white" fontSize="25px" fontWeight="semibold" mb="10px">{project[item].name}</Heading>
 
-                <Text fontSize="18px"  h="40%">
-                {project[1].description}
-                </Text>
+                <Box fontSize="18px"  h={{base: 'auto', md: "300px"}} mb="30px" overflow="hidden" borderRadius="xl" position="relative">
 
-                <Flex wrap="wrap" gap="10px" h="30%" mt={{base:"15px", lg:"5px"}}>
+                    <Image src={project[item].image} alt="projectImage" h="100%" w="100%" objectFit="cover" boxShadow="dark-lg" borderRadius="xl" display={{base: 'none', md:"block"}}/> 
 
-                    {project[1].skill.map((skill:string,index:number) => (
+                    <Flex h={{base: "auto", md: "50%"}} position={{base: "static", md: "absolute"}} bottom="0" bg={{base: "none", md: "rgb(0, 0, 0, 0.7)"}} w="100%" p={{base: "0", md: "20px"}} align={{base: 'flex-start', md: "center"}} justify={{base: 'flex-start', md: "center"}} id="imgHover">
+                        <Text fontWeight="" color={{base: "primary.600", md: "white"}}>
+                            {project[item].description}
+                        </Text>
+                    </Flex>
+                </Box>
 
-                    <Box h="max-content" py="5px" px="10px" border="1px" borderRadius="5px" color="primary.800" key={index}>
+                <Flex wrap="wrap" gap="10px" h="30%" mt={{base:"15px", lg:"5px"}} mb="25px">
+
+                    {project[item].skill.map((skill:string,index:number) => (
+
+                    <Box h="max-content" py="5px" px="10px" border="1px" borderColor="primary.900" borderRadius="5px" color="primary.800" key={index}>
                         {skill}
                     </Box>
 
@@ -63,24 +77,31 @@ const Project = () => {
                 <Flex justify="space-between" mt="15px">
                 <Link
                     target="_blank"
-                    fontSize="30px"
+                    fontSize="25px"
                     _hover={{
                         textDecoration:"none",
                         color:'white'
                     }}
-                    href={project[1].github}>
-                        <SiGithub/>
+                    href={project[item].github}>
+                        <Flex gap="15px" align="center" border={{base: 'none', md: "1px"}} px="15px" borderRadius="md">
+                            <Box display={{base: 'none', md:'block'}}>Github</Box>
+                            <SiGithub/>
+                        </Flex>
+                        
                     </Link>
 
                     <Link
                     target="_blank"
-                    fontSize="30px"
+                    fontSize="25px"
                     _hover={{
                         textDecoration:"none",
                         color:'white'
                     }}
-                    href={project[1].live}>
-                        <BsBoxArrowUpRight/>
+                    href={project[item].live}>
+                        <Flex gap="15px" align="center" border={{base: 'none', md: "1px"}} px="15px" borderRadius="md">
+                            <Box display={{base: 'none', md:'block'}}>Live</Box>
+                            <BsBoxArrowUpRight/>
+                        </Flex>
                     </Link>
                     
                 </Flex>
@@ -90,121 +111,7 @@ const Project = () => {
 
             </motion.div>
 
-            <motion.div
-            initial={{ opacity: 0, y: 20}}
-            whileInView={{ opacity: 1, y:0}}
-            transition={{
-                duration: 0.5,
-                delay: 0.4
-            }}
-            >
-
-            <Box h={{base: "400px", lg:"370px"}} bg="secondary.900" p="20px" boxShadow="dark-lg" borderRadius="xl">
-
-                <Heading color="white" fontSize="25px" fontWeight="semibold" mb="10px">{project[2].name}</Heading>
-
-                <Text fontSize="18px"  h="40%">
-                {project[2].description}
-                </Text>
-
-                <Flex wrap="wrap" gap="10px" h="30%" mt={{base:"15px", lg:"5px"}}>
-
-                    {project[2].skill.map((skill:string,index:number) => (
-
-                    <Box h="max-content" py="5px" px="10px" border="1px" borderRadius="5px" color="primary.800" key={index}>
-                        {skill}
-                    </Box>
-
-                    ))}
-
-                </Flex>
-
-                <Flex justify="space-between" mt="15px">
-                <Link
-                    target="_blank"
-                    fontSize="30px"
-                    _hover={{
-                        textDecoration:"none",
-                        color:'white'
-                    }}
-                    href={project[2].github}>
-                        <SiGithub/>
-                    </Link>
-
-                    <Link
-                    target="_blank"
-                    fontSize="30px"
-                    _hover={{
-                        textDecoration:"none",
-                        color:'white'
-                    }}
-                    href={project[2].live}>
-                        <BsBoxArrowUpRight/>
-                    </Link>
-                    
-                </Flex>
-            </Box>
-
-            </motion.div>
-
-            <motion.div
-            initial={{ opacity: 0, y: 20}}
-            whileInView={{ opacity: 1, y:0}}
-            transition={{
-                duration: 0.5,
-                delay: 0
-            }}
-            >
-
-            <Box h={{base: "400px", lg:"370px"}} bg="secondary.900" p="20px" boxShadow="dark-lg" borderRadius="xl">
-
-                <Heading color="white" fontSize="25px" fontWeight="semibold" mb="10px">{project[3].name}</Heading>
-
-                
-
-                <Text fontSize="18px"  h="40%">
-                {project[3].description}
-                </Text>
-
-                <Flex wrap="wrap" gap="10px" h="30%" mt={{base:"15px", lg:"5px"}}>
-
-                    {project[3].skill.map((skill:string,index:number) => (
-
-                    <Box h="max-content" py="5px" px="10px" border="1px" borderRadius="5px" color="primary.800" key={index}>
-                        {skill}
-                    </Box>
-
-                    ))}
-
-                </Flex>
-
-                <Flex justify="space-between" mt="15px">
-                <Link
-                    target="_blank"
-                    fontSize="30px"
-                    _hover={{
-                        textDecoration:"none",
-                        color:'white'
-                    }}
-                    href={project[3].github}>
-                        <SiGithub/>
-                    </Link>
-
-                    <Link
-                    target="_blank"
-                    fontSize="30px"
-                    _hover={{
-                        textDecoration:"none",
-                        color:'white'
-                    }}
-                    href={project[3].live}>
-                        <BsBoxArrowUpRight/>
-                    </Link>
-                    
-                </Flex>
-            </Box>
-
-            </motion.div>
+            ))}
 
             </>
 
@@ -222,7 +129,7 @@ const Project = () => {
                 }}
                 rightIcon={<BsArrowRightCircleFill/>}
                  px="100px" mt="40px" color="black" bg="primary.900" variant='solid' borderRadius="full">
-                    Voir Tous
+                    Voir Plus
                 </Button>
             </Box>
             

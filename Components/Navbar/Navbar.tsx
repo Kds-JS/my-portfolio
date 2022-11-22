@@ -31,7 +31,7 @@ const Navbar = () => {
             <Image
               boxSize={{base:'40px',md:'50px'}}
               objectFit='cover'
-              src='https://i.ibb.co/C990FN3/brand-2.png'
+              src='https://i.ibb.co/mymgg9v/brand-2-removebg-preview.png'
               alt='logo'
             />
           
