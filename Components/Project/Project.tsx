@@ -73,22 +73,10 @@ const Project = () => {
                     </Flex>
                 </Box>
 
-                {/* <Flex wrap="wrap" gap="10px" h="30%" mt={{base:"15px", lg:"5px"}} mb="25px">
-
-                    {project[item].skill.map((skill:string,index:number) => (
-
-                    <Box h="max-content" py="5px" px="10px" border="1px" borderColor="primary.900" borderRadius="5px" color="primary.800" key={index}>
-                        {skill}
-                    </Box>
-
-                    ))}
-
-                </Flex> */}
-
                 <Flex justify="space-between" mt="15px">
                 <Link
                     target="_blank"
-                    fontSize="25px"
+                    fontSize={{base: "35px", md: "25px"}}
                     _hover={{
                         textDecoration:"none",
                         color:'white'
@@ -103,7 +91,7 @@ const Project = () => {
 
                     <Link
                     target="_blank"
-                    fontSize="25px"
+                    fontSize={{base: "35px", md: "25px"}}
                     _hover={{
                         textDecoration:"none",
                         color:'white'

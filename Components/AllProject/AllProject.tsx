@@ -81,7 +81,7 @@ const AllProject = ({onClose,isOpen,project}: AllProjectProps) => {
                             <Flex justify="space-between" mt="15px">
                             <Link
                                 target="_blank"
-                                fontSize="25px"
+                                fontSize={{base: "35px", md: "25px"}}
                                 _hover={{
                                     textDecoration:"none",
                                     color:'white'
@@ -96,7 +96,7 @@ const AllProject = ({onClose,isOpen,project}: AllProjectProps) => {
 
                                 <Link
                                 target="_blank"
-                                fontSize="25px"
+                                fontSize={{base: "35px", md: "25px"}}
                                 _hover={{
                                     textDecoration:"none",
                                     color:'white'
