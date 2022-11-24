@@ -53,30 +53,30 @@ const AllProject = ({onClose,isOpen,project}: AllProjectProps) => {
                     >
                         <Box bg="secondary.900" p="20px" boxShadow="dark-lg" borderRadius="xl" id="projectCard">
 
-                            <Heading color="white" fontSize="25px" fontWeight="semibold" mb="10px">{item.name}</Heading>
+                            <Heading display={{base: "block", md:"none"}} color="white" fontSize="25px" fontWeight="semibold" mb="10px">{item.name}</Heading>
 
                             <Box fontSize="18px"  h={{base: 'auto', md: "300px"}} mb="30px" overflow="hidden" borderRadius="xl" position="relative">
 
                                 <Image src={item.image} alt="projectImage" h="100%" w="100%" objectFit="cover" boxShadow="dark-lg" borderRadius="xl" display={{base: 'none', md:"block"}}/> 
 
-                                <Flex h={{base: "auto", md: "50%"}} position={{base: "static", md: "absolute"}} bottom="0" bg={{base: "none", md: "rgb(0, 0, 0, 0.7)"}} w="100%" p={{base: "0", md: "20px"}} align={{base: 'flex-start', md: "center"}} justify={{base: 'flex-start', md: "center"}} id="imgHover">
+                                <Flex direction="column" h={{base: "auto", md: "auto"}} position={{base: "static", md: "absolute"}} bottom="0" bg={{base: "none", md: "rgb(0, 0, 0, 0.9)"}} w="100%" p={{base: "0", md: "20px"}} justify={{base: 'flex-start', md: "center"}} id="imgHover">
                                     <Text fontWeight="" color={{base: "primary.600", md: "white"}}>
                                         {item.description}
                                     </Text>
+                                    <Flex wrap="wrap" gap="10px" h="30%" mt={{base:"15px", lg:"5px"}} mb="25px" my='10px'>
+
+                                        {item.skill.map((skill:string,index:number) => (
+
+                                        <Box h="max-content" py="5px" px="10px" border="1px" borderColor="primary.900" borderRadius="5px" color="primary.800" key={index}>
+                                            {skill}
+                                        </Box>
+
+                                        ))}
+
+                                    </Flex>
                                 </Flex>
                             </Box>
 
-                            <Flex wrap="wrap" gap="10px" h="30%" mt={{base:"15px", lg:"5px"}} mb="25px">
-
-                                {item.skill.map((skill:string,index:number) => (
-
-                                <Box h="max-content" py="5px" px="10px" border="1px" borderColor="primary.900" borderRadius="5px" color="primary.800" key={index}>
-                                    {skill}
-                                </Box>
-
-                                ))}
-
-                            </Flex>
 
                             <Flex justify="space-between" mt="15px">
                             <Link

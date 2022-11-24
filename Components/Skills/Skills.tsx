@@ -2,11 +2,10 @@ import React, { useEffect } from 'react';
 import {Flex, Grid, Box, Heading, Text} from '@chakra-ui/react';
 
 
-import { SiTypescript, SiJavascript, SiHtml5, SiCss3, SiChakraui, SiFirebase, SiSass, SiGithub} from 'react-icons/si';
-import { GrReactjs} from 'react-icons/gr';
+import { SiTypescript, SiJavascript, SiSolidity, SiChakraui, SiFirebase} from 'react-icons/si';
+import { GrReactjs, GrNode} from 'react-icons/gr';
 import { TbBrandNextjs} from 'react-icons/tb';
-import { BsBootstrapFill} from 'react-icons/bs';
-
+import { FaHardHat, FaEthereum} from 'react-icons/fa';
 
 const Skills = () => {
 
@@ -60,28 +59,28 @@ const Skills = () => {
             <Flex height="180px" width={{base: "100%", md: "100%"}} bg="secondary.900" flexDirection="column" align="center" py="25px" justify="space-between" borderRadius="md" boxShadow='dark-lg' transition= "all 0.4s ease" _hover={{
                 transform: "translateY(-15px)"
             }}>
-                <Box fontSize="60px" color="#FC490B">
-                    <SiHtml5/>
+                <Box fontSize="60px" color="#616161">
+                    <SiSolidity/>
                 </Box>
-                <Text fontSize="18px">HTML</Text>
+                <Text fontSize="18px">Solidity</Text>
             </Flex>
 
             <Flex height="180px" width={{base: "100%", md: "100%"}} bg="secondary.900" flexDirection="column" align="center" py="25px" justify="space-between" borderRadius="md" boxShadow='dark-lg' transition= "all 0.4s ease" _hover={{
                 transform: "translateY(-15px)"
             }}>
-                <Box fontSize="60px" color="#E0ABC6">
-                    <SiSass/>
+                <Box fontSize="60px" color="#F2E500">
+                    <FaHardHat/>
                 </Box>
-                <Text fontSize="18px">SASS</Text>
+                <Text fontSize="18px">Hardhat</Text>
             </Flex>
 
             <Flex height="180px" width={{base: "100%", md: "100%"}} bg="secondary.900" flexDirection="column" align="center" py="25px" justify="space-between" borderRadius="md" boxShadow='dark-lg' transition= "all 0.4s ease" _hover={{
                 transform: "translateY(-15px)"
             }}>
-                <Box fontSize="60px" color="#214CE5">
-                    <SiCss3/>
+                <Box fontSize="60px" color="#617BDF">
+                    <FaEthereum/>
                 </Box>
-                <Text fontSize="18px">CSS</Text>
+                <Text fontSize="18px">Ethereum</Text>
             </Flex>
 
             <Flex height="180px" width={{base: "100%", md: "100%"}} bg="secondary.900" flexDirection="column" align="center" py="25px" justify="space-between" borderRadius="md" boxShadow='dark-lg' transition= "all 0.4s ease" _hover={{
@@ -96,10 +95,10 @@ const Skills = () => {
             <Flex height="180px" width={{base: "100%", md: "100%"}} bg="secondary.900" flexDirection="column" align="center" py="25px" justify="space-between" borderRadius="md" boxShadow='dark-lg' transition= "all 0.4s ease" _hover={{
                 transform: "translateY(-15px)"
             }}>
-                <Box fontSize="60px" color="#722DF9">
-                    <BsBootstrapFill/>
+                <Box fontSize="60px" color="#4F9640">
+                    <GrNode/>
                 </Box>
-                <Text fontSize="18px">Bootstrap</Text>
+                <Text fontSize="18px">Node js</Text>
             </Flex>
 
             <Flex height="180px" width={{base: "100%", md: "100%"}} bg="secondary.900" flexDirection="column" align="center" py="25px" justify="space-between" borderRadius="md" boxShadow='dark-lg' transition= "all 0.4s ease" _hover={{
@@ -109,15 +108,6 @@ const Skills = () => {
                     <SiFirebase/>
                 </Box>
                 <Text fontSize="18px">Firebase</Text>
-            </Flex>
-
-            <Flex height="180px" width={{base: "100%", md: "100%"}} bg="secondary.900" flexDirection="column" align="center" py="25px" justify="space-between" borderRadius="md" boxShadow='dark-lg' transition= "all 0.4s ease" _hover={{
-                transform: "translateY(-15px)"
-            }}>
-                <Box fontSize="60px" color="white">
-                    <SiGithub/>
-                </Box>
-                <Text fontSize="18px">Github</Text>
             </Flex>
             
             </Grid>

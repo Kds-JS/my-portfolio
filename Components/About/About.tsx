@@ -81,7 +81,7 @@ const About = () => {
                         </Box>
 
 
-                        <Flex mt="50px" gap="25px" wrap="wrap">
+                        <Flex mt="50px" gap="25px" wrap="wrap" display={'none'}>
                             <Button
                             onClick={downloadCv}
                             colorScheme="purple"

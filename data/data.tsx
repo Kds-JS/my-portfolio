@@ -1,21 +1,21 @@
 export const data = {
     project: [
         {
-            name: "Mint-Staking-Dapp",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus necessitatibus a assumenda perferendis fugiat placeat dignissimos provident",
+            name: "Mint-Staking-DApp",
+            description: "Il s'agit d'une application décentralisée (DApp). Elle permet de créer un NFT (ERC721A), vérouiller un NFT et réclamer les rewards (token ERC20).",
             image: 'https://i.ibb.co/FW4pjnZ/staking.png', 
-            skill: ["Next.JS", "TypeScript"," Chakra UI"], 
-            github: "https://github.com/Kds-JS/my-portfolio",
-            live: "https://koudous-salifou.com/"
+            skill: ["Solidity","Hardhat","Ethers.JS", "React.JS"," Chakra UI"], 
+            github: "https://github.com/Kds-JS/NFT-Mint-Staking-Dapp",
+            live: "https://nft-mint-staking-dapp.vercel.app/"
         },
 
         {
-            name: "NFT-Panding-Page",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus necessitatibus a assumenda perferendis fugiat placeat dignissimos provident",
+            name: "NFT-Landing-Page",
+            description: "Il s'agit d'une landing page d'une collection de NFT",
             image: 'https://i.ibb.co/j3Z9Q69/landing.png', 
-            skill: ["Next.JS", "TypeScript"," Chakra UI"],
-            github: "https://github.com/Kds-JS/my-portfolio",
-            live: "https://koudous-salifou.com/"
+            skill: ["React.JS"," Chakra UI"],
+            github: "https://github.com/Kds-JS/NFT-landing-page",
+            live: "https://my-nfts-kds.vercel.app/"
         },
 
         {
@@ -29,7 +29,7 @@ export const data = {
 
         {
             name: "E-Shop",
-            description: "un site e-commerce - une application qui permet aux utilisateurs d'ajouter des produits au panier, elle récupère les données d'une API personnalisée.",
+            description: "Un site e-commerce - une application qui permet aux utilisateurs d'ajouter des produits au panier, elle récupère les données d'une API personnalisée.",
             image: 'https://i.ibb.co/s9n40zL/e-shop.png',
             skill: ["React.JS", "React.Router", "SASS","Bootstrap","API"],
             github: "https://github.com/Kds-JS/E-Commerce-Shop",
