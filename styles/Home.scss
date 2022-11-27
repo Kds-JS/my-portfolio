@@ -51,36 +51,3 @@
       }
     }
   }
-
-.dynamic-txts{
-    overflow: hidden;
-}
-.dynamic-txts .text{
-    position: relative;
-    color: #6F69EE;
-    font-weight: 600;
-}
-.dynamic-txts .first-text{
-    color: #FFF;
-}
-.text.sec-text:before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #04082E;
-    border-left: 2px solid #6F69EE;
-    animation: animate 4s steps(12) infinite;
-}
-@keyframes animate{
-    40%, 60%{
-        left: calc(100% + 4px);
-    }
-    100%{
-        left: 0%;
-    }
-}
-
-  

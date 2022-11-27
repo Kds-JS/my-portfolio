@@ -1,8 +1,7 @@
 import { Flex, Box, Heading, Text, Link} from '@chakra-ui/react';
+import Typewriter from 'typewriter-effect';
 
-
-
-import React,{ReactHTML, ReactHTMLElement, useEffect, useRef} from 'react';
+import React from 'react';
 import { BsGithub, BsTwitter,BsLinkedin } from 'react-icons/bs';
 import { CgArrowLongDown} from 'react-icons/cg';
 import ButtonDown from '../Button/Button';
@@ -12,27 +11,6 @@ import { motion} from "framer-motion";
 
 
 const Profil = () => {
-
-    let text : any;
-
-    if (typeof document !== "undefined") {
-        text = document.querySelector(".sec-text");
-      }
-
-        const textLoad = () => {
-            setTimeout(() => {
-                text.textContent = "web3";
-            }, 0);
-            setTimeout(() => {
-                text.textContent = "Front-End";
-            }, 4000);
-            setTimeout(() => {
-                text.textContent = "Solidity";
-            }, 8000);
-        }
-
-        textLoad();
-        setInterval(textLoad, 12000);
 
     return (
         <Flex mt={{base: "20px", md:"30px", lg:"40px"}} minH="87vh" justify="center" direction="column" pl={{base: "0", lg:"5%"}} pr={{base: "0", xl:"25%"}} position="relative" >
@@ -83,8 +61,17 @@ const Profil = () => {
                       viewport={{ once: true}}
                 >
                     <Flex gap="15px" align={{base:'flex-start', md:'center'}}mb="20px" direction={{base:'column', md:'row'}} id='profil2' overflow="hidden" className='dynamic-txts'>
-                    <Box fontSize={{base: '45px', md:"60px"}} className='text first-text'>Développeur</Box>
-                    <Box fontSize={{base: '45px', md:"60px"}}  className='text sec-text'>web3</Box>
+                    <Box fontWeight="600" fontSize={{base: '45px', md:"60px"}} color="white">Développeur</Box>
+                    <Box fontWeight="600" fontSize={{base: '45px', md:"60px"}}  color="primary.900">
+                        <Typewriter
+                        options={{
+                            strings: ['Web3', 'Front-End', 'Solidity'],
+                            autoStart: true,
+                            delay: 150,
+                            loop: true,
+                        }}
+                        />
+                    </Box>
                     </Flex>
 
                     </motion.div>
