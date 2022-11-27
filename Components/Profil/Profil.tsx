@@ -21,10 +21,10 @@ const Profil = () => {
 
         const textLoad = () => {
             setTimeout(() => {
-                text.textContent = "Front-End";
+                text.textContent = "web3";
             }, 0);
             setTimeout(() => {
-                text.textContent = "web3";
+                text.textContent = "Front-End";
             }, 4000);
             setTimeout(() => {
                 text.textContent = "Solidity";
@@ -84,7 +84,7 @@ const Profil = () => {
                 >
                     <Flex gap="15px" align={{base:'flex-start', md:'center'}}mb="20px" direction={{base:'column', md:'row'}} id='profil2' overflow="hidden" className='dynamic-txts'>
                     <Box fontSize={{base: '45px', md:"60px"}} className='text first-text'>Développeur</Box>
-                    <Box fontSize={{base: '45px', md:"60px"}}  className='text sec-text'>Front-End</Box>
+                    <Box fontSize={{base: '45px', md:"60px"}}  className='text sec-text'>web3</Box>
                     </Flex>
 
                     </motion.div>
