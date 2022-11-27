@@ -72,7 +72,7 @@ const About = () => {
                 >
                         <Box fontSize="20px">
                         <Text >
-                        {"Je m'appelle Koudous et je suis développeur web Front-End React JS dépuis le Bénin."}
+                        {"Je m'appelle Koudous et je suis développeur web dépuis le Bénin."}
                         </Text>
 
                         <Text my="20px">Je suis autodidacte et passionné par les dernières technologies web.</Text>

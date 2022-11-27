@@ -11,18 +11,23 @@ import { Modal,ModalOverlay,ModalContent,ModalBody,ModalFooter,ModalHeader,Modal
 
 import { motion} from "framer-motion";
 
+type projectType = {
+    name: string;
+    description: string;
+    image: string;
+    skill: string[];
+    github: string;
+    live: string;
+}
 
 type AllProjectProps = {
     onClose: () => void;
     isOpen: boolean;
-    project: any;
+    project: projectType[];
 }
 
 
-
-
 const AllProject = ({onClose,isOpen,project}: AllProjectProps) => {
-    // console.log(project);
 
 
     
@@ -39,7 +44,7 @@ const AllProject = ({onClose,isOpen,project}: AllProjectProps) => {
 
           <Grid templateColumns={{base: 'repeat(1, 1fr)', "2xl": 'repeat(2, 1fr)'}} columnGap={6} rowGap={10}>
 
-            {project && project.map((item: any, index: number) => {
+            {project && project.map((item: projectType, index: number) => {
                 return (
 
                     <motion.div key={index}

@@ -1,7 +1,8 @@
 import { Box, Circle, Flex, Heading, Link, Text } from '@chakra-ui/react';
 import React from 'react';
 
-import { BsGithub, BsTwitter,BsLinkedin } from 'react-icons/bs';
+import { BsGithub, BsTwitter} from 'react-icons/bs';
+import { SiDiscord} from 'react-icons/si';
 
 import {MdEmail } from 'react-icons/md';
 
@@ -31,7 +32,7 @@ const Footer = () => {
                     <Link
                     target="_blank"
                     fontSize="45px"
-                    href="https://www.linkedin.com/in/koudous-salifou-5003a6249/">
+                    href="https://discord.com/users/842885714190139394">
                         <Circle size='100px' boxShadow='dark-lg' bg="primary.300"
                     color="primary.600" _hover={{
                         textDecoration:"none",
@@ -39,7 +40,7 @@ const Footer = () => {
                         bg:"primary.900",
                         color:'white'
                     }}>
-                            <BsLinkedin/>
+                            <SiDiscord/>
                         </Circle>
                         
                     </Link>

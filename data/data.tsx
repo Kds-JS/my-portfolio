@@ -2,7 +2,7 @@ export const data = {
     project: [
         {
             name: "Mint-Staking-DApp",
-            description: "Il s'agit d'une application décentralisée (DApp). Elle permet de créer un NFT (ERC721A), vérouiller un NFT et réclamer les rewards (token ERC20).",
+            description: "Il s'agit d'une application décentralisée (DApp). Elle permet de Mint un NFT (ERC721A), Jalonner un NFT et réclamer les rewards (token ERC20).",
             image: 'https://i.ibb.co/FW4pjnZ/staking.png', 
             skill: ["Solidity","Hardhat","Ethers.JS", "React.JS"," Chakra UI"], 
             github: "https://github.com/Kds-JS/NFT-Mint-Staking-Dapp",
@@ -49,7 +49,7 @@ export const data = {
             name: "Todo List",
             description: "Une application de gestion des tâches (Ajout,Modification,Suppression,Filtre).",
             image: 'https://i.ibb.co/tHDvp8w/todo.png', 
-            skill: ["React.JS", "React.Router", "SASS","Firebase"],
+            skill: ["React.JS", "SASS", "LocalStorage"],
             github: "https://github.com/Kds-JS/Todo-List-App",
             live: "https://todo-list-app-seven-zeta.vercel.app/"
         }
