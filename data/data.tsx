@@ -49,7 +49,7 @@ export const data = {
             name: "Todo List",
             description: "Une application de gestion des tâches (Ajout,Modification,Suppression,Filtre).",
             image: 'https://i.ibb.co/tHDvp8w/todo.png', 
-            skill: ["React.JS", "SASS", "LocalStorage"],
+            skill: ["React.JS", "CSS", "LocalStorage"],
             github: "https://github.com/Kds-JS/Todo-List-App",
             live: "https://todo-list-app-seven-zeta.vercel.app/"
         }
