@@ -18,7 +18,7 @@ import Skills from '../Components/Skills/Skills';
         <link rel="icon" href="https://i.ibb.co/mymgg9v/brand-2-removebg-preview.png" />
         <meta property="og:title" content="Koudous Salifou  • Développeur web3 React JS - Solidity" />
      <meta property="og:description" content="je suis développeur web3, voici mon portfolio." />
-     <meta property="og:image" content="https://i.ibb.co/6bkh9p7/website.png" />
+     <meta property="og:image" content="https://i.ibb.co/9cX21wH/portfolio.png" />
      <meta property="og:url" content="https://koudous-salifou.com/" />
      
      <meta name="twitter:card" content="summary_large_image"></meta>
