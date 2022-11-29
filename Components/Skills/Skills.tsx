@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import {Flex, Grid, Box, Heading, Text} from '@chakra-ui/react';
+import {Flex, Grid, Box, Heading, Text, Image} from '@chakra-ui/react';
 
 
-import { SiTypescript, SiJavascript, SiSolidity, SiChakraui, SiFirebase} from 'react-icons/si';
+import { SiTypescript, SiJavascript, SiSolidity, SiChakraui, SiFirebase, SiChainlink} from 'react-icons/si';
 import { GrReactjs, GrNode} from 'react-icons/gr';
 import { TbBrandNextjs} from 'react-icons/tb';
 import { FaHardHat, FaEthereum} from 'react-icons/fa';
@@ -77,10 +77,19 @@ const Skills = () => {
             <Flex height="180px" width={{base: "100%", md: "100%"}} bg="secondary.900" flexDirection="column" align="center" py="25px" justify="space-between" borderRadius="md" boxShadow='dark-lg' transition= "all 0.4s ease" _hover={{
                 transform: "translateY(-15px)"
             }}>
-                <Box fontSize="60px" color="#617BDF">
-                    <FaEthereum/>
+                <Box>
+                    <Image src='https://i.ibb.co/7J6KBF8/ethers-logo.png' alt="ethers-js" h="60px"/>
                 </Box>
-                <Text fontSize="18px">Ethereum</Text>
+                <Text fontSize="18px">Ethers JS</Text>
+            </Flex>
+
+            <Flex height="180px" width={{base: "100%", md: "100%"}} bg="secondary.900" flexDirection="column" align="center" py="25px" justify="space-between" borderRadius="md" boxShadow='dark-lg' transition= "all 0.4s ease" _hover={{
+                transform: "translateY(-15px)"
+            }}>
+                <Box fontSize="60px" color="#2A5ADA">
+                    <SiChainlink/>
+                </Box>
+                <Text fontSize="18px">Chainlink</Text>
             </Flex>
 
             <Flex height="180px" width={{base: "100%", md: "100%"}} bg="secondary.900" flexDirection="column" align="center" py="25px" justify="space-between" borderRadius="md" boxShadow='dark-lg' transition= "all 0.4s ease" _hover={{

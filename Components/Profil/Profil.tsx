@@ -65,7 +65,7 @@ const Profil = () => {
                     <Box fontWeight="600" fontSize={{base: '45px', md:"60px"}}  color="primary.900">
                         <Typewriter
                         options={{
-                            strings: ['Web3', 'Front-End', 'Solidity'],
+                            strings: ['Blockchain','Web3', 'Front-End', 'Solidity'],
                             autoStart: true,
                             delay: 150,
                             loop: true,

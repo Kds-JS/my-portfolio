@@ -16,10 +16,6 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 
 import {Link} from "react-scroll";
 
-
-
-
-
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 

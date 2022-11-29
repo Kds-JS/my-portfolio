@@ -9,7 +9,7 @@ import {MdEmail } from 'react-icons/md';
 const Footer = () => {
     return (
         <Flex px={{base: "5%", md:"0"}} pb="150px" align="center" direction="column" id="contact">
-            <Heading color="white" mb="50px">Contact</Heading>
+            <Heading color="white" mb="50px">Contactez Moi</Heading>
 
             <Flex gap="25px" wrap="wrap" justify="center">
 

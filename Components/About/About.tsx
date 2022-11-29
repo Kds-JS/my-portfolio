@@ -70,14 +70,13 @@ const About = () => {
                 }}
                 viewport={{ once: true}}
                 >
+
                         <Box fontSize="20px">
                         <Text >
                         {"Je m'appelle Koudous et je suis développeur web dépuis le Bénin."}
                         </Text>
 
-                        <Text my="20px">Je suis autodidacte et passionné par les dernières technologies web.</Text>
-
-                        <Text>{"Après un bootcamp de 3 mois où j'ai appris (HTML, CSS, JavaScript, PHP et MySQL), j'ai continué à me former en autodidacte. Je suis toujours intéressé par l'apprentissage de nouvelles technologies et de nouveaux langages."}</Text>
+                        <Text my="20px">{"Ma formation web a débutée par un bootcamp durant lequel j'ai appris les bases (HTML, CSS, JavaScript, PHP et MySQL). Je continue de me former en autodidacte et je construis plusieurs projets. Motivé je serai heureux de vous accompagner dans la conception de votre projet, vous pouvez donc me déléguer une mission ou m'inviter à rejoindre votre équipe si besoin."}</Text>
                         </Box>
 
 
