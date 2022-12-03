@@ -15,6 +15,7 @@ import { CgClose } from 'react-icons/cg';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
 import {Link} from "react-scroll";
+import NavLink from './NavLink';
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -69,7 +70,10 @@ const Navbar = () => {
                 </Link>
               </Text>
 
-              
+              <Text>
+                <NavLink link={"https://blog.koudous-salifou.com/"} text={"Blog"} />
+              </Text>
+
             
             </HStack>
 
@@ -127,7 +131,10 @@ const Navbar = () => {
                 </Link>
               </Text>
             
-       
+              <Text>
+                <NavLink link={"https://blog.koudous-salifou.com/"} text={"Blog"} />
+              </Text>
+              
             </Stack>
           </Box>
         ) : null}
