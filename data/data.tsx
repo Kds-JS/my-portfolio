@@ -1,6 +1,14 @@
 export const data = {
     project: [
         {
+            name: "Audiophile-Shop",
+            description: "Il s'agit d'un défi du site de Frontend Mentor. Le but est de créer un site d'e-commerce de produits audio et à le rendre aussi proche que possible de la conception.",
+            image: 'https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/gsga5rj9gks5rd3h05xl.jpg', 
+            skill: ["Next.JS","TypeScript","Tailwind CSS","Redux"], 
+            github: "https://github.com/Kds-JS/audiophile-shop",
+            live: "https://kds-audiophile-shop.vercel.app/"
+        },
+        {
             name: "Mint-Staking-DApp",
             description: "Il s'agit d'une application décentralisée (DApp). Elle permet de Mint un NFT (ERC721A), Jalonner un NFT et réclamer les rewards (token ERC20).",
             image: 'https://i.ibb.co/FW4pjnZ/staking.png', 
@@ -48,7 +56,7 @@ export const data = {
         {
             name: "Todo List",
             description: "Une application de gestion des tâches (Ajout,Modification,Suppression,Filtre).",
-            image: 'https://i.ibb.co/tHDvp8w/todo.png', 
+            image: 'https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/llcq9eiv3ney5tkxgdtu.jpg', 
             skill: ["React.JS", "CSS", "LocalStorage"],
             github: "https://github.com/Kds-JS/Todo-List-App",
             live: "https://todo-list-app-seven-zeta.vercel.app/"

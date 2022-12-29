@@ -1,6 +1,6 @@
 import { Link } from '@chakra-ui/react';
 import React from 'react';
-import { Url } from 'url';
+
 
 type navlinkProps = {
     link : string;

@@ -6,7 +6,6 @@ import '../styles/globals.scss';
 import '../styles/Home.scss';
 
 const colors = {
-  primar: "red",
   primary: {
     900: '#6F69EE',
     800: '#8AA3AF',

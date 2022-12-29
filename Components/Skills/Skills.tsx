@@ -2,12 +2,80 @@ import React, { useEffect } from 'react';
 import {Flex, Grid, Box, Heading, Text, Image} from '@chakra-ui/react';
 
 
-import { SiTypescript, SiJavascript, SiSolidity, SiChakraui, SiFirebase, SiChainlink} from 'react-icons/si';
+import { SiTypescript, SiJavascript, SiSolidity, SiChakraui, SiFirebase, SiChainlink, SiRedux, SiTailwindcss} from 'react-icons/si';
 import { GrReactjs, GrNode} from 'react-icons/gr';
 import { TbBrandNextjs} from 'react-icons/tb';
-import { FaHardHat, FaEthereum} from 'react-icons/fa';
+import { FaHardHat} from 'react-icons/fa';
+
 
 const Skills = () => {
+
+    const skills = [
+        {
+            img: SiJavascript,
+            title: "Javascript",
+            color: "#F0DB4F"
+        },
+
+        {
+            img: GrReactjs,
+            title: "Reactjs",
+            color: "#00D8FF"
+        },
+
+        {
+            img: TbBrandNextjs,
+            title: "Nextjs",
+            color: "#FFF"
+        },
+
+        {
+            img: SiTypescript,
+            title: "Typescript",
+            color: "#007ACC"
+        },
+
+        {
+            img: SiRedux,
+            title: "Redux",
+            color: "#7046B2"
+        },
+
+        {
+            img: SiTailwindcss,
+            title: "Tailwind CSS",
+            color: "#38BDF8"
+        },
+
+        {
+            img: SiChakraui,
+            title: "Chakra UI",
+            color: "#58C9C8"
+        },
+
+        {
+            img: GrNode,
+            title: "Nodejs",
+            color: "#4F9640"
+        },
+
+        {
+            img: SiSolidity,
+            title: "Solidity",
+            color: "#616161"
+        },
+        {
+            img: FaHardHat,
+            title: "HardHat",
+            color: "#F2E500"
+        },
+
+        {
+            img: SiChainlink,
+            title: "Chainlink",
+            color: "#2A5ADA"
+        },
+    ]
 
     return (
         <Box py="40px" id="skills">
@@ -20,62 +88,21 @@ const Skills = () => {
             <Grid templateColumns={{base: 'repeat(2, 1fr)', md: 'repeat(4, 1fr)', xl: 'repeat(6, 1fr)'}} gap={10}>
 
 
-            <Flex height="180px" width={{base: "100%", md: "100%"}} bg="secondary.900" flexDirection="column" align="center" py="25px" justify="space-between" borderRadius="md" boxShadow='dark-lg' transition= "all 0.4s ease" _hover={{
-                transform: "translateY(-15px)"
-            }} >
-                <Box fontSize="60px" color="#F0DB4F">
-                    <SiJavascript/>
-                </Box>
-                <Text fontSize="18px">JavaScript</Text>
-            </Flex>
+            {skills.map((item, index) => (
+                <Flex height="180px" width={{base: "100%", md: "100%"}} bg="secondary.900" flexDirection="column" align="center" py="25px" justify="space-between" borderRadius="md" boxShadow='dark-lg' transform="scale(1)"
+                transition= "0.3s ease-in-out" _hover={{
+                    transform: "scale(1.15)"
+                }} key={index}>
+                    <Box fontSize="60px" color={item.color}>
+                        <item.img/>
+                    </Box>
+                    <Text fontSize="18px">{item.title}</Text>
+                </Flex>
+            ))}
 
-            <Flex height="180px" width={{base: "100%", md: "100%"}} bg="secondary.900" flexDirection="column" align="center" py="25px" justify="space-between" borderRadius="md" boxShadow='dark-lg' transition= "all 0.4s ease" _hover={{
-                transform: "translateY(-15px)"
-            }} >
-                <Box fontSize="60px" color="#00D8FF">
-                    <GrReactjs/>
-                </Box>
-                <Text fontSize="18px">React JS</Text>
-            </Flex>
-            
-            <Flex height="180px" width={{base: "100%", md: "100%"}} bg="secondary.900" flexDirection="column" align="center" py="25px" justify="space-between" borderRadius="md" boxShadow='dark-lg' transition= "all 0.4s ease" _hover={{
-                transform: "translateY(-15px)"
-            }}>
-                <Box fontSize="60px" color="white">
-                    <TbBrandNextjs/>
-                </Box>
-                <Text fontSize="18px">Next JS</Text>
-            </Flex>
-
-            <Flex height="180px" width={{base: "100%", md: "100%"}} bg="secondary.900" flexDirection="column" align="center" py="25px" justify="space-between" borderRadius="md" boxShadow='dark-lg' transition= "all 0.4s ease" _hover={{
-                transform: "translateY(-15px)"
-            }}>
-                <Box fontSize="60px" color="#007ACC">
-                    <SiTypescript/>
-                </Box>
-                <Text fontSize="18px">TypeScript</Text>
-            </Flex>
-
-            <Flex height="180px" width={{base: "100%", md: "100%"}} bg="secondary.900" flexDirection="column" align="center" py="25px" justify="space-between" borderRadius="md" boxShadow='dark-lg' transition= "all 0.4s ease" _hover={{
-                transform: "translateY(-15px)"
-            }}>
-                <Box fontSize="60px" color="#616161">
-                    <SiSolidity/>
-                </Box>
-                <Text fontSize="18px">Solidity</Text>
-            </Flex>
-
-            <Flex height="180px" width={{base: "100%", md: "100%"}} bg="secondary.900" flexDirection="column" align="center" py="25px" justify="space-between" borderRadius="md" boxShadow='dark-lg' transition= "all 0.4s ease" _hover={{
-                transform: "translateY(-15px)"
-            }}>
-                <Box fontSize="60px" color="#F2E500">
-                    <FaHardHat/>
-                </Box>
-                <Text fontSize="18px">Hardhat</Text>
-            </Flex>
-
-            <Flex height="180px" width={{base: "100%", md: "100%"}} bg="secondary.900" flexDirection="column" align="center" py="25px" justify="space-between" borderRadius="md" boxShadow='dark-lg' transition= "all 0.4s ease" _hover={{
-                transform: "translateY(-15px)"
+            <Flex height="180px" width={{base: "100%", md: "100%"}} bg="secondary.900" flexDirection="column" align="center" py="25px" justify="space-between" borderRadius="md" boxShadow='dark-lg' transform="scale(1)"
+                transition= "0.3s ease-in-out" _hover={{
+                transform: "scale(1.15)"
             }}>
                 <Box>
                     <Image src='https://i.ibb.co/7J6KBF8/ethers-logo.png' alt="ethers-js" h="60px"/>
@@ -83,41 +110,7 @@ const Skills = () => {
                 <Text fontSize="18px">Ethers JS</Text>
             </Flex>
 
-            <Flex height="180px" width={{base: "100%", md: "100%"}} bg="secondary.900" flexDirection="column" align="center" py="25px" justify="space-between" borderRadius="md" boxShadow='dark-lg' transition= "all 0.4s ease" _hover={{
-                transform: "translateY(-15px)"
-            }}>
-                <Box fontSize="60px" color="#2A5ADA">
-                    <SiChainlink/>
-                </Box>
-                <Text fontSize="18px">Chainlink</Text>
-            </Flex>
-
-            <Flex height="180px" width={{base: "100%", md: "100%"}} bg="secondary.900" flexDirection="column" align="center" py="25px" justify="space-between" borderRadius="md" boxShadow='dark-lg' transition= "all 0.4s ease" _hover={{
-                transform: "translateY(-15px)"
-            }}>
-                <Box fontSize="60px" color="#58C9C8">
-                    <SiChakraui/>
-                </Box>
-                <Text fontSize="18px">Chakra UI</Text>
-            </Flex>
-
-            <Flex height="180px" width={{base: "100%", md: "100%"}} bg="secondary.900" flexDirection="column" align="center" py="25px" justify="space-between" borderRadius="md" boxShadow='dark-lg' transition= "all 0.4s ease" _hover={{
-                transform: "translateY(-15px)"
-            }}>
-                <Box fontSize="60px" color="#4F9640">
-                    <GrNode/>
-                </Box>
-                <Text fontSize="18px">Node js</Text>
-            </Flex>
-
-            <Flex height="180px" width={{base: "100%", md: "100%"}} bg="secondary.900" flexDirection="column" align="center" py="25px" justify="space-between" borderRadius="md" boxShadow='dark-lg' transition= "all 0.4s ease" _hover={{
-                transform: "translateY(-15px)"
-            }}>
-                <Box fontSize="60px" color="#FCCA3F">
-                    <SiFirebase/>
-                </Box>
-                <Text fontSize="18px">Firebase</Text>
-            </Flex>
+            
             
             </Grid>
             
